@@ -1,4 +1,4 @@
-# Jogo Pedral, Papel & Tesoura
+# Jogo Pedra, Papel & Tesoura
 
 O principal objetivo é criar **casos de testes** para o jogo sem a utilização de frameworks de testes de terceiros.
 
