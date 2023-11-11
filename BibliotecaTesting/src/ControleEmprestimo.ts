@@ -10,25 +10,29 @@ export class ControleEmprestimo {
     }
     
     realizarEmprestimo(aluno: Aluno, livro: Livro){
+        let livroemprestado = false;
+
         // verificar se há emprestimos
         if( this.emprestimos.length == 0 ){
             this.emprestarLivro(aluno, livro, this.gerarDataDevolucao());
         }else{
-            // verificar se o livro já está emprestado
+            // verificar em toda a lista se o livro já está emprestado
             for(const emprestimo of this.emprestimos){
                 // se o livro já está emprestado...
                 if( livro === emprestimo.getLivro() ){
-                    console.log(`${aluno.getNome()}, não é possível realizar o empréstimo do livro '${livro.getTitulo()}'.`);
-                }else{
-                    this.emprestarLivro(aluno, livro, this.gerarDataDevolucao());
+                    livroemprestado = true;
                 }
+            }
+
+            // caso o livro não esteja emprestado...
+            if(!livroemprestado){
+                this.emprestarLivro(aluno, livro, this.gerarDataDevolucao());
             }
         }
     }
 
     private emprestarLivro(aluno: Aluno, livro: Livro, devolucao: Date){
         this.emprestimos.push( new Emprestimo(aluno, livro, devolucao));
-        console.log(`Livro '${livro.getTitulo()}' emprestado para o aluno '${aluno.getNome()}' com sucesso! \nA data de devolução é ${devolucao}`);
     }
 
     private gerarDataDevolucao(): Date {

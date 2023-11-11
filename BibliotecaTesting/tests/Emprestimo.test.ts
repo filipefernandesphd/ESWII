@@ -1,6 +1,6 @@
-import { Emprestimo } from "../src/Emprestimo";
 import { Aluno } from "../src/Aluno";
 import { Livro } from "../src/Livro";
+import { Emprestimo } from "../src/Emprestimo";
 
 describe('Emprestimo', ()=>{
     // deve ser criado corretamente
