@@ -1,0 +1,10 @@
+include ../template
+h1 Atualizar Dados
+form(action="/usuario/dadosatualizados", method="post")
+    label(for="nome") Nome:
+    input(type="text", id="nome", name="nome", placeholder="Digite seu nome")
+    p
+    label(for="email") E-mail:
+    input(type="email", id="email", name="email", placeholder="Digite seu e-mail")
+    p
+    button(type="submit") Enviar
