@@ -1,12 +1,13 @@
-import { ItemCtrl } from "./Item";
+import { Item } from "./Item";
 import { Usuario } from "./Usuario";
 
 export class Carrinho {
     private _usuario: Usuario;
-    private _itens: ItemCtrl[];
+    private _itens: Item[];
     private _cupomDesconto: string;
+    private _cidade: string = "";
   
-    constructor(usuario: Usuario, itens: ItemCtrl[], cupomDesconto: string) {
+    constructor(usuario: Usuario, itens: Item[], cupomDesconto: string) {
       this._usuario = usuario;
       this._itens = [];
       this._cupomDesconto = cupomDesconto;
@@ -22,11 +23,11 @@ export class Carrinho {
     }
   
     // Getters e Setters para o atributo 'itens'
-    getItens(): ItemCtrl[] {
+    getItens(): Item[] {
       return this._itens;
     }
   
-    setItens(novosItens: ItemCtrl[]) {
+    setItens(novosItens: Item[]) {
       this._itens = novosItens;
     }
   
@@ -37,5 +38,14 @@ export class Carrinho {
   
     setCupomDesconto(novoCupomDesconto: string) {
       this._cupomDesconto = novoCupomDesconto;
+    }
+
+    // Getters e Setters para o atributo 'cidade'
+    getCidade(){
+      return this._cidade;
+    }
+
+    setCidade(cidade: string){
+      this._cidade = cidade;
     }
 }

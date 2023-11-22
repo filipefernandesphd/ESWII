@@ -1,6 +1,15 @@
 # E-COMMERCE
 Este projeto tem como objetivo escrever testes para cobrir as histórias dos usuários. 
 
+# Instalação e Execução
+- Instalação: `npm install`
+- Execução em ambiente de desenvolvimento: `npm run dev`
+- Testes de unidade: `test-unit`
+- Testes de integração: `test-integration`
+- Testes de aceitação: `test-acceptance`
+- Build: `npm build`
+- Execução em ambiente de produção: `npm start`
+
 # Histórias do Usuário
 
 ## História de Usuário 1

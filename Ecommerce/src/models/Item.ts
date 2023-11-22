@@ -1,4 +1,4 @@
-export class ItemCtrl {
+export class Item {
     private _nome: string;
     private _descricao: string;
     private _preco: number;

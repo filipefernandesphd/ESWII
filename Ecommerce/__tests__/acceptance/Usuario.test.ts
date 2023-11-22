@@ -1,6 +1,6 @@
 import {Builder, By, Key} from 'selenium-webdriver';
 
-describe('Selenium Usuario', ()=>{
+describe('Dashboard', ()=>{
     it('deve permitir a atualização dos dados e mostrar o resultado da alteração', async ()=>{
         // Configurar o navegador
         let driver = await new Builder().forBrowser('chrome').build();
