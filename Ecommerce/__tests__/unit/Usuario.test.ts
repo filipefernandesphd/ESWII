@@ -1,4 +1,4 @@
-import { Usuario } from "../src/models/Usuario";
+import { Usuario } from "../../src/models/Usuario";
 
 describe('Usuario', ()=>{
     it('deve ser criado corretamente', ()=>{
