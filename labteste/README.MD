@@ -3,7 +3,7 @@
 Projeto utilizado para aprender o desenvolvimento de testes unitários com **Jest**.
 
 ## 1. Criar projeto
-1. No terminal:
+### No terminal:
 ```bash
 npm init -y
 npm i express
@@ -13,7 +13,7 @@ npx ts-jest config:init
 mkdir src
 ```
 
-2. Configurar `tscondig.json`:
+### Configurar `tscondig.json`:
 ```json
 {
     "compilerOptions": {
@@ -33,7 +33,7 @@ mkdir src
 }
 ```
 
-3. Atualizar `package.json`:
+### Atualizar `package.json`:
 ```json
 "scripts": {
     "start": "node ./dist/index.js",    
@@ -43,7 +43,7 @@ mkdir src
 }
 ```
 
-4. Criar `./src/index.ts`:
+###  Criar `./src/index.ts`:
 ```typescript
 import express, {Request, Response} from "express";
 
@@ -61,7 +61,7 @@ app.listen(PORT, ()=>{
 });
 ```
 
-5. Iniciar aplicação:
+###  Iniciar aplicação:
 - Ambiente de desenvolvimento: `npm run dev`
 - Ambiente de produção: `npm start`
 - Compilar aplicação: `npm run build` (este comando builda e já inicia a aplicação)
