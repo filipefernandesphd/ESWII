@@ -33,6 +33,18 @@ mkdir src
 }
 ```
 
+### Configurar `jest.config.js`
+```json
+/** @type {import('ts-jest').JestConfigWithTsJest} **/
+module.exports = {
+  preset: "ts-jest",
+  testEnvironment: "node",
+  transform: {
+    "^.+.tsx?$": ["ts-jest",{}],
+  },
+};
+```
+
 ### Atualizar `package.json`:
 ```json
 "scripts": {

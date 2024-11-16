@@ -1,6 +1,6 @@
 export class Empregado {
     private id!: number;
-    private name!: string;
+    private nome!: string;
     private diaria!: number;                // preço de um dia de trabalho
     private horasTrabalhadas!: number;
 
@@ -17,15 +17,15 @@ export class Empregado {
     }
 
     // Getter e Setter para name
-    public getName(): string {
-        return this.name;
+    public getNome(): string {
+        return this.nome;
     }
 
-    public setName(name: string): void {
-        if (!name || name.trim() === "") {
+    public setNome(nome: string): void {
+        if (!nome || nome.trim() === "") {
             throw new Error("O nome não pode estar vazio.");
         }
-        this.name = name;
+        this.nome = nome;
     }
 
     // Getter e Setter para diaria
