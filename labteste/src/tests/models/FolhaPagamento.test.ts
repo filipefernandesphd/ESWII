@@ -1,5 +1,5 @@
-import { FolhaPagamento } from "../../src/models/FolhaPagamento";
-import { Empregado } from "../../src/models/Empregado";
+import { FolhaPagamento } from "../../models/FolhaPagamento";
+import { Empregado } from "../../models/Empregado";
 
 let folhaPagamento: FolhaPagamento;
 let emp1: Empregado;

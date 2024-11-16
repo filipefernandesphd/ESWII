@@ -1,4 +1,4 @@
-import { Empregado } from "../../src/models/Empregado";
+import { Empregado } from "../../models/Empregado";
 
 describe("Id do empregado" , ()=> {
 	test('deve ser atribuído quando for positivo', ()=>{
