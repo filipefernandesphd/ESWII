@@ -6,7 +6,7 @@ let emp1: Empregado;
 let emp2: Empregado;
 let emp3: Empregado;
 
-beforeEach(()=>{
+beforeAll(()=>{
     folhaPagamento = new FolhaPagamento();
     emp1 = new Empregado();
     emp2 = new Empregado();
@@ -30,7 +30,7 @@ describe("Folha de pagamento", ()=>{
         emp3.setDiaria(10);
         emp3.setHorasTrabalhadas(0.123456789);
 
-        folhaPagamento.adicionarEmpregado(emp1);
+        // folhaPagamento.adicionarEmpregado(emp1); // já foi adicionado no teste anterior
         folhaPagamento.adicionarEmpregado(emp2);
         folhaPagamento.adicionarEmpregado(emp3);
 
