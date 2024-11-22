@@ -18,3 +18,8 @@
     1. Os tipos de pagamentos aceitos são Pix, Boleto Bancário e Cartão de Crédito
 1. A quantidade de parcelas deve ser número inteiro e maior ou igual a 1
 1. Ao finalizar o carrinho, o saldo em estoque do item deve ser atualizado
+
+## Comandos Jest
+- `npm test`: executa todos os testes
+- `npm test -- dir/arquivo.test.ts`: executa os testes de um arquivo específico
+- `npm test -- dir/arquivo.test.ts t "cenário de teste"`: executa um cenário de teste de um arquivo específico

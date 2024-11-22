@@ -13,7 +13,7 @@ npx ts-jest config:init
 mkdir src
 ```
 
-### Configurar `tscondig.json`:
+### Configurar `tsconfig.json`:
 ```json
 {
     "compilerOptions": {
@@ -60,7 +60,6 @@ module.exports = {
 import express, {Request, Response} from "express";
 
 const app = express();
-
 const PORT = process.env.PORT || 3000;
 
 

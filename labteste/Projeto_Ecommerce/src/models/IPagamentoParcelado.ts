@@ -3,8 +3,11 @@ export interface IPagamentoParcelado {
     getNome(): string;
     
     setValorMininoCompra(valor:number): void;
-    getValorMininoCompra(valor:number): number;
+    getValorMininoCompra(): number;
+
+    setValorMaximoCompra(valor:number): void;
+    getValorMaximoCompra(): number;
 
     setQuantidadeMaximaParcelas(valor:number): void;
-    getQuantidadeMaximaParcelas(valor:number): number;
+    getQuantidadeMaximaParcelas(): number;
 }

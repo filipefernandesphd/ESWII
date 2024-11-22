@@ -4,4 +4,7 @@ export interface IPagamentoAvista {
     
     setValorMininoCompra(valor:number): void;
     getValorMininoCompra(): number;
+
+    setValorMaximoCompra(valor:number): void;
+    getValorMaximoCompra(): number;
 }

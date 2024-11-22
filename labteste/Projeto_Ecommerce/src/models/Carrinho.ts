@@ -24,7 +24,7 @@ export class Carrinho {
 
     // adiciona o preço do frete
     public adicionarFrete(valor: number): void {
-        if(this.frete == undefined || this.frete <=0){throw new Error("O frete deve ser informado!");}
+        if(valor <=0){throw new Error("O frete deve ser informado!");}
         this.frete = valor;
     }
 
@@ -37,6 +37,6 @@ export class Carrinho {
 
     // finalizar compra
     public finalizarCompra(): void {
-        
+        // IMPLEMENTAR
     }
 }
