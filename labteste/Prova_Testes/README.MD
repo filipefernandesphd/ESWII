@@ -32,3 +32,8 @@ Além disso, uma outra forma de tratar execeções no Jest foi apresentada acima
 ## Documentação
 
 O arquivo `./doc_jest.pdf` possui uma breve documentação do Jest.
+
+## Comandos
+
+- `npm install`: instalar pacotes
+- `npm run test:coverage`: realizar cobertura de testes
