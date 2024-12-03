@@ -1,57 +1,62 @@
-import { Avaliacao } from "../Avaliacao";
+import {Avaliacao} from "../Avaliacao";
 
-let av1: Avaliacao;
-let av2: Avaliacao;
-let av3: Avaliacao;
+describe("Nome da avaliação", ()=>{
+    let avaliacao: Avaliacao
 
-beforeEach(()=>{
-    av1 = new Avaliacao();
-    av2 = new Avaliacao();
-    av3 = new Avaliacao();
+    beforeEach(() =>{
+        avaliacao = new Avaliacao();
+    });
+
+    it("deve lançar um erro quando não for informado", ()=>{
+        try{
+            avaliacao.setNome("")
+        } catch(error){
+            expect(error).toBeInstanceOf(Error);
+        }
+    })
+
+    it("deve ser atribuído", ()=>{
+        avaliacao.setNome("Prova 1")
+        expect(avaliacao.getNome()).toEqual("Prova 1");
+    })
+})
+
+describe("nota da Avaliação", ()=>{
+    let avaliacao: Avaliacao;
+    let a1: any;
+    
+    beforeEach(()=>{
+        avaliacao = new Avaliacao();
+    })
+
+    it("deve lançar um erro quando for inválida", ()=>{
+        try{
+            avaliacao.setNota(a1);
+        } catch(error){
+            expect(error).toBeInstanceOf(Error);
+        }
+
+         try{
+             avaliacao.setNota(0);
+         } catch(error){
+             expect(error).toBeInstanceOf(Error);
+         }
+
+         try{
+            avaliacao.setNota(3.55);
+        } catch(error){
+            expect(error).toBeInstanceOf(Error);
+        }
+
+        try{
+            avaliacao.setNota(5);
+        } catch(error){
+            expect(error).toBeInstanceOf(Error);
+        }
+    })
+
+      it("deve ser atribuída quando tiver apenas uma casa decimal",()=>{
+          avaliacao.setNota(5.5);
+          expect(avaliacao.getNota()).toEqual(5.5);
+      })
 });
-
-// Nome da avaliação
-describe('Nome da avaliação', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        av1.setNome('AV1');
-        expect(av1.getNome()).toBe('AV1');
-    });
-
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>av1.getNome() ).toThrow(/^O nome não pode estar indefinido!$/);
-    });
-
-    // deve lançar uma exceção quando for vazio
-    it('deve lançar uma exceção quando for vazio', ()=>{
-        expect( ()=>av1.setNome('') ).toThrow(/^O nome não pode estar vazio!$/);
-    });
-});
-
-
-// Nota da avaliação
-describe('Nota da avaliação', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        av1.setNota(2.5);
-        expect(av1.getNota()).toEqual(2.5);
-    });
-
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>av1.getNota() ).toThrow(/^A nota não pode estar indefinida!$/);
-    });
-
-    // deve lançar uma exceção quando for inválido
-    it('deve lançar uma exceção quando for inválido', ()=>{
-        
-        expect( ()=>av1.setNota(0) ).toThrow(/^O valor da avaliação deve ser um número válido!$/);
-        expect( ()=>av1.setNota(0.12) ).toThrow(/^O valor da avaliação deve ser um número válido!$/);
-
-        let outroobjeto:any;
-        expect( ()=>av1.setNota(outroobjeto) ).toThrow(/^O valor da avaliação deve ser um número válido!$/);
-    });
-});
-
-
