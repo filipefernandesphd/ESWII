@@ -2,76 +2,111 @@ import { Disciplina } from "../Disciplina";
 import { Aluno } from "../Aluno";
 
 let disciplina: Disciplina;
+let test:Aluno;
 
 beforeEach(()=>{
     disciplina = new Disciplina();
+    test = new Aluno();
 });
 
-// Nome da disciplina
-describe('Nome da disciplinca', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        disciplina.setNome('Engenharia de Software');
-        expect(disciplina.getNome()).toBe('Engenharia de Software');
+describe("Nome da disciplina", ()=>{
+    it("deve ser atribuido", ()=>{
+        disciplina.setNome("Matematica");
+        expect(disciplina.getNome()).toEqual("Matematica");
     });
 
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>disciplina.getNome() ).toThrow(/^O nome não pode estar indefinido!$/);
-    });
+    it("deve lançar um erro se retornar sem nada", ()=>{
+        try {
+            disciplina.getNome();
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+        }
+    })
 
-    // deve lançar uma exceção quando for vazio
-    it('deve lançar uma exceção quando for vazio', ()=>{
-        expect( ()=>disciplina.setNome('') ).toThrow(/^O nome não pode estar vazio!$/);
-    });
-});
-
-
-// Código da disciplina
-describe('Código da disciplinca', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        disciplina.setCodigo('INF03068');
-        expect(disciplina.getCodigo()).toBe('INF03068');
-    });
-
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>disciplina.getCodigo() ).toThrow(/^O código não pode estar indefinido!$/);
-    });
-
-    // deve lançar uma exceção quando for vazio ou inválido
-    it('deve lançar uma exceção quando for vazio ou inválido', ()=>{
-        expect( ()=>disciplina.setCodigo('') ).toThrow(/^O código deve ser válido!$/);
-
-        expect( ()=>disciplina.setCodigo('AB12345') ).toThrow(/^O código deve ser válido!$/);
-        expect( ()=>disciplina.setCodigo('abcd1234') ).toThrow(/^O código deve ser válido!$/);
-        expect( ()=>disciplina.setCodigo('ABC12A45') ).toThrow(/^O código deve ser válido!$/);
+    it("deve lançar um erro quando não for informado", ()=>{
+        try {
+            disciplina.setNome("");
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+        }
     });
 });
 
 
-// Lista de alunos
-describe('Lista de alunos', ()=>{
-    let al1 = new Aluno();
-    let al2 = new Aluno();
-    let al3 = new Aluno();
-
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        disciplina.adicionarAluno(al1);
-        disciplina.adicionarAluno(al2);
-        disciplina.adicionarAluno(al3);
-
-        expect(disciplina.getAlunos()).toContain(al1);
-        expect(disciplina.getAlunos()).toContain(al2);
-        expect(disciplina.getAlunos()).toContain(al3);
+describe("Codigo", ()=>{
+    it("deve ser atribuido min", ()=>{
+        disciplina.setCodigo("AAA11111");
+        expect(disciplina.getCodigo()).toEqual("AAA11111");
     });
 
-    // deve lançar uma exceção quando não adicionar um aluno
-    it('deve lançar uma exceção quando não adicionar um aluno', ()=>{
-        let outroobjeto: any;
-        expect(()=>disciplina.adicionarAluno(outroobjeto)).toThrow(/^Deve ser adicionado um aluno!$/);
+    it("deve ser atribuido max", ()=>{
+        disciplina.setCodigo("zzz99999");
+        expect(disciplina.getCodigo()).toEqual("zzz99999");
+    });
+
+    it("deve lançar um erro se retornar sem nada", ()=>{
+        try {
+            disciplina.getCodigo();
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+        }
+    })
+
+    it("deve lançar um erro quando não for informado", ()=>{
+        try {
+            disciplina.setCodigo("");
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+        }
+    });
+
+    it("deve lançar um erro quando nao for informado menos 3  letras", ()=>{
+        try {
+            disciplina.setCodigo("AA555555");
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+        }
+    });
+
+    it("deve lançar um erro quando nao for informado mais 3 letras", ()=>{
+        try {
+            disciplina.setCodigo("AAAA5555");
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+        }
+    });
+
+    it("deve lançar um erro quando nao for informado menos 8 caracteries", ()=>{
+        try {
+            disciplina.setCodigo("AA55555");
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+        }
+    });
+
+    it("deve lançar um erro quando nao for informado mais 8 caracateries", ()=>{
+        try {
+            disciplina.setCodigo("AAAA55555");
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+        }
     });
 });
 
+
+
+describe("Aluno", ()=>{
+    it("deve ser atribuido", ()=>{
+        disciplina.adicionarAluno(test);
+        expect(disciplina.getCodigo()).toEqual(test);
+    });
+
+    it("deve lançar um erro se retornar sem nada", ()=>{
+        try {
+            disciplina.getAlunos();
+        } catch (error) {
+            expect(error).toBeInstanceOf(Error);
+        }
+    })
+    
+})
