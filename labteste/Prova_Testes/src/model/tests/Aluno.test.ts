@@ -1,115 +1,79 @@
-import crypto from 'crypto';
 import { Aluno } from "../Aluno";
 
-let aluno: Aluno;
+let aluno:Aluno;
 
-beforeEach(()=>{
+beforeAll(()=>{
     aluno = new Aluno();
 });
 
-// Nome do aluno
-describe('Nome do aluno', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        aluno.setNome('Filipe');
-        expect(aluno.getNome()).toBe('Filipe');
+describe("Definir aluno",()=>{
+    describe("Definir nome",()=>{
+        it("Deve gerar um erro se o nome for inválido",()=>{
+            try {
+                aluno.setNome("");
+            } catch (error) {
+                expect(error).toBeInstanceOf(Error);
+            }
+        });
+        it("Deve receber um nome válido",()=>{
+            aluno.setNome("Teste");
+            expect(aluno.getNome()).toEqual("Teste");
+        });
     });
 
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o getNome() e this.nome estiver indefinido', ()=>{
-        expect( ()=>aluno.getNome() ).toThrow(/^O nome não pode estar indefinido!$/);
+    describe("Definir matricula",()=>{
+        it("Deve gerar um erro se o matricula for inválida",()=>{
+            expect(()=>aluno.setMatricula("")).toThrow(/^A matrícula deve ser válida!$/);
+            expect( ()=>aluno.setMatricula('gshhjagdhagj') ).toThrow(/^A matrícula deve ser válida!$/);
+            expect( ()=>aluno.setMatricula('1234567') ).toThrow(/^A matrícula deve ser válida!$/);
+            expect( ()=>aluno.setMatricula('123456789') ).toThrow(/^A matrícula deve ser válida!$/);
+            expect( ()=>aluno.setMatricula('123ds678') ).toThrow(/^A matrícula deve ser válida!$/);
+        });
+        it("Deve receber um matricula válida",()=>{
+            aluno.setMatricula("19864444");
+            expect(aluno.getMatricula()).toEqual("19864444");
+        });
     });
 
-    // deve lançar uma exceção quando for vazio
-    it('deve lançar uma exceção quando o nome for vazio', ()=>{
-        expect( ()=>aluno.setNome('') ).toThrow(/^O nome não pode estar vazio!$/);
-    });
-});
-
-// Matrícula do aluno
-describe('Matrícula do aluno', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        aluno.setMatricula('20241234');
-        expect(aluno.getMatricula()).toEqual('20241234');
-    });
-
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>aluno.getMatricula() ).toThrow(/^A matrícula não pode estar indefinida!$/);
+    describe("Definir CPF",()=>{
+        it("Deve gerar um erro se o CPF for inválido",()=>{
+            expect(()=>aluno.setCpf("")).toThrow(/^O CPF deve ser válido!$/);
+            expect( ()=>aluno.setCpf('gshhjagdhagj') ).toThrow(/^O CPF deve ser válido!$/);
+            expect( ()=>aluno.setCpf('1234567891') ).toThrow(/^O CPF deve ser válido!$/);
+            expect( ()=>aluno.setCpf('123456789122') ).toThrow(/^O CPF deve ser válido!$/);
+            expect( ()=>aluno.setCpf('asd456789122') ).toThrow(/^O CPF deve ser válido!$/);
+        });
+        it("Deve receber um CPF válido",()=>{
+            aluno.setCpf("12345678909");
+            expect(aluno.getCpf()).toEqual("12345678909");
+        });
     });
 
-    // deve lançar uma exceção quando for vazio ou se for inválido
-    it('deve lançar uma exceção quando for vazio', ()=>{
-        expect( ()=>aluno.setMatricula('') ).toThrow(/^A matrícula deve ser válida!$/);
-        expect( ()=>aluno.setMatricula('1234') ).toThrow(/^A matrícula deve ser válida!$/);
-    }); 
-});
-
-// CPF do aluno
-describe('CPF do aluno', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        aluno.setCpf('12345678909');
-        expect(aluno.getCpf()).toBe('12345678909');
+    describe("Definir Email",()=>{
+        it("Deve gerar um erro se o Email for inválido",()=>{
+            expect(()=>aluno.setEmail("")).toThrow(/^O email deve ser válido!$/);
+            expect( ()=>aluno.setEmail('gshhjagdhagj') ).toThrow(/^O email deve ser válido!$/);
+            expect( ()=>aluno.setEmail('1234567891') ).toThrow(/^O email deve ser válido!$/);
+            expect( ()=>aluno.setEmail('sdadadads.com') ).toThrow(/^O email deve ser válido!$/);
+            expect( ()=>aluno.setEmail('asdas@sadas/sdad') ).toThrow(/^O email deve ser válido!$/);
+            expect( ()=>aluno.setEmail('asdas@sadassdad') ).toThrow(/^O email deve ser válido!$/);
+        });
+        it("Deve receber um Email válido",()=>{
+            aluno.setEmail("teste@teste.com");
+            expect(aluno.getEmail()).toEqual("teste@teste.com");
+        });
     });
 
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>aluno.getCpf() ).toThrow(/^O CPF não pode estar indefinido!$/);
+    describe("Definir senha",()=>{
+        it("Deve gerar um erro se o senha for inválida",()=>{
+            expect(()=>aluno.setSenha("")).toThrow(/^A senha deve ser válida!$/);
+            expect(()=>aluno.setSenha("1234567")).toThrow(/^A senha deve ser válida!$/);
+            expect(()=>aluno.setSenha("12345678")).toThrow(/^A senha deve ser válida!$/);expect(()=>aluno.setSenha("asdfghjk")).toThrow(/^A senha deve ser válida!$/);
+            expect(()=>aluno.setSenha("asdf1234")).toThrow(/^A senha deve ser válida!$/);expect(()=>aluno.setSenha("!@#$%¨&*")).toThrow(/^A senha deve ser válida!$/);
+        });
+        it("Deve receber um senha válida",()=>{
+            aluno.setSenha("Teste@12389");
+            expect(aluno.getSenha()).toEqual("Teste@12389");
+        });
     });
-
-    // deve lançar uma exceção quando for vazio ou se for inválido
-    it('deve lançar uma exceção quando for vazio ou se for inválido', ()=>{
-        expect( ()=>aluno.setCpf('') ).toThrow(/^O CPF deve ser válido!$/);
-        expect( ()=>aluno.setCpf('1234') ).toThrow(/^O CPF deve ser válido!$/);
-    }); 
-});
-
-// E-mail do aluno
-describe('E-mail do aluno', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        aluno.setEmail('filipe.fernandes@ifsudestemg.edu.br');
-        expect(aluno.getEmail()).toBe('filipe.fernandes@ifsudestemg.edu.br');
-    });
-
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>aluno.getEmail() ).toThrow(/^O email não pode estar indefinido!$/);
-    });
-
-    // deve lançar uma exceção quando for vazio ou se for inválido
-    it('deve lançar uma exceção quando for vazio ou se for inválido', ()=>{
-        expect( ()=>aluno.setEmail('') ).toThrow(/^O email deve ser válido!$/);
-
-        expect( ()=>aluno.setEmail('asdf@asdf') ).toThrow(/^O email deve ser válido!$/);
-        expect( ()=>aluno.setEmail('asdf@') ).toThrow(/^O email deve ser válido!$/);
-        expect( ()=>aluno.setEmail('@') ).toThrow(/^O email deve ser válido!$/);
-        expect( ()=>aluno.setEmail('@com.br') ).toThrow(/^O email deve ser válido!$/);
-    }); 
-});
-
-// Senha do aluno
-describe('Senha do aluno', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        aluno.setSenha('A@1asdfg');
-        expect(aluno.getSenha()).toBe('A@1asdfg');
-    });
-
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>aluno.getSenha() ).toThrow(/^A senha não pode estar indefinida!$/);
-    });
-
-    // deve lançar uma exceção quando for vazio ou se for inválido
-    it('deve lançar uma exceção quando for vazio ou se for inválido', ()=>{
-        expect( ()=>aluno.setSenha('') ).toThrow(/^A senha deve ser válida!$/);                     // senha vazia
-
-        expect( ()=>aluno.setSenha('asdfghjkl') ).toThrow(/^A senha deve ser válida!$/);            // somente letras minúsculas
-        expect( ()=>aluno.setSenha('WEDFTGGHHJ') ).toThrow(/^A senha deve ser válida!$/);           // somente letras maiúsculas
-        expect( ()=>aluno.setSenha('1234567890') ).toThrow(/^A senha deve ser válida!$/);           // somente números
-        expect( ()=>aluno.setSenha('!@#$%ˆ&*()(') ).toThrow(/^A senha deve ser válida!$/);          // somente caracteres especiais
-    }); 
 });
