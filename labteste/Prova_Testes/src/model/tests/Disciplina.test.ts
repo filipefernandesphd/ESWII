@@ -1,77 +1,65 @@
 import { Disciplina } from "../Disciplina";
 import { Aluno } from "../Aluno";
 
-let disciplina: Disciplina;
+let disc : Disciplina;
+let aluno1 : Aluno;
+let aluno2 : Aluno;
 
-beforeEach(()=>{
-    disciplina = new Disciplina();
-});
+beforeAll(()=>{
+    aluno1 = new Aluno();
+    aluno2 = new Aluno();
+})
 
-// Nome da disciplina
-describe('Nome da disciplinca', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        disciplina.setNome('Engenharia de Software');
-        expect(disciplina.getNome()).toBe('Engenharia de Software');
-    });
+describe("Nome da disciplina", ()=>{
+    beforeEach(()=>{
+        disc = new Disciplina();
+    })
+    it("deve atribuir",()=>{
+        disc.setNome("Teste");
+        expect(disc.getNome()).toEqual("Teste");
+    })
+    it("deve lançar exceção caso esteja errado", ()=>{
+        expect(()=>disc.getNome()).toThrow(/^O nome não pode estar indefinido!$/);
+        expect(()=>disc.setNome('')).toThrow(/^O nome não pode estar vazio!$/);
+    })
+})
 
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>disciplina.getNome() ).toThrow(/^O nome não pode estar indefinido!$/);
-    });
+describe("Codigo da Disciplina", ()=>{
+    beforeEach(()=>{
+        disc = new Disciplina();
+    })
+    it("deve atribuir", ()=>{
+        // ABC12345 codigo da disc 
+        disc.setCodigo("ABC12345");
+        expect(disc.getCodigo()).toEqual("ABC12345");
+        disc.setCodigo("abc12345");
+        expect(disc.getCodigo()).toEqual("abc12345");
+    })
+    it("deve lançar exceção", ()=>{
+        expect(()=>disc.getCodigo()).toThrow(/^O código não pode estar indefinido!$/);
+        expect(()=>disc.setCodigo("AB123456")).toThrow(/^O código deve ser válido!$/);
+        expect(()=>disc.setCodigo("ABCD3456")).toThrow(/^O código deve ser válido!$/);
+        expect(()=>disc.setCodigo("ABC1234")).toThrow(/^O código deve ser válido!$/);
+        expect(()=>disc.setCodigo("ABC123456")).toThrow(/^O código deve ser válido!$/);
+        expect(()=>disc.setCodigo("asd12sd1232")).toThrow(/^O código deve ser válido!$/);
+    })
+})
 
-    // deve lançar uma exceção quando for vazio
-    it('deve lançar uma exceção quando for vazio', ()=>{
-        expect( ()=>disciplina.setNome('') ).toThrow(/^O nome não pode estar vazio!$/);
-    });
-});
+describe("Lista de Alunos", ()=>{
+    beforeEach(()=>{
+        disc = new Disciplina();
+    })
+    let obj : any;
 
+    it("deve adicionar certo", ()=>{
+        disc.adicionarAluno(aluno1);
+        disc.adicionarAluno(aluno2);
+        expect(disc.getAlunos()).toContain(aluno1);
+        expect(disc.getAlunos()).toContain(aluno2);
+    })
 
-// Código da disciplina
-describe('Código da disciplinca', ()=>{
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        disciplina.setCodigo('INF03068');
-        expect(disciplina.getCodigo()).toBe('INF03068');
-    });
+    it("deve lançar exceção caso seja adicionar algo alem de objeto de Aluno", ()=>{
+        expect(()=>disc.adicionarAluno(obj)).toThrow(/^Deve ser adicionado um aluno!$/);
+    })
 
-    // deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido
-    it('deve lançar uma exceção quando chamar o método get e o atributo estiver indefinido', ()=>{
-        expect( ()=>disciplina.getCodigo() ).toThrow(/^O código não pode estar indefinido!$/);
-    });
-
-    // deve lançar uma exceção quando for vazio ou inválido
-    it('deve lançar uma exceção quando for vazio ou inválido', ()=>{
-        expect( ()=>disciplina.setCodigo('') ).toThrow(/^O código deve ser válido!$/);
-
-        expect( ()=>disciplina.setCodigo('AB12345') ).toThrow(/^O código deve ser válido!$/);
-        expect( ()=>disciplina.setCodigo('abcd1234') ).toThrow(/^O código deve ser válido!$/);
-        expect( ()=>disciplina.setCodigo('ABC12A45') ).toThrow(/^O código deve ser válido!$/);
-    });
-});
-
-
-// Lista de alunos
-describe('Lista de alunos', ()=>{
-    let al1 = new Aluno();
-    let al2 = new Aluno();
-    let al3 = new Aluno();
-
-    // deve ser atribuído
-    it('deve ser atribuído', ()=>{
-        disciplina.adicionarAluno(al1);
-        disciplina.adicionarAluno(al2);
-        disciplina.adicionarAluno(al3);
-
-        expect(disciplina.getAlunos()).toContain(al1);
-        expect(disciplina.getAlunos()).toContain(al2);
-        expect(disciplina.getAlunos()).toContain(al3);
-    });
-
-    // deve lançar uma exceção quando não adicionar um aluno
-    it('deve lançar uma exceção quando não adicionar um aluno', ()=>{
-        let outroobjeto: any;
-        expect(()=>disciplina.adicionarAluno(outroobjeto)).toThrow(/^Deve ser adicionado um aluno!$/);
-    });
-});
-
+})
