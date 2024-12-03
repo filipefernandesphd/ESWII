@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import { Aluno } from '../Aluno';
+import { Aluno } from "../Aluno";
 
 let aluno: Aluno;
 
