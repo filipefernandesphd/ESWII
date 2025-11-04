@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "produto": "Café Expresso",
+    "quantidade": 2,
+    "status": "pendente"
+  },
+  {
+    "id": 2,
+    "produto": "Leite Integral",
+    "quantidade": 1,
+    "status": "enviado"
+  },
+  {
+    "id": 3,
+    "produto": "Pão de Queijo",
+    "quantidade": 5,
+    "status": "entregue"
+  }
+]
