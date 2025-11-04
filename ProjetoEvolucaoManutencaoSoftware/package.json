@@ -1,0 +1,17 @@
+{
+  "name": "Projeto Evolução e Manutenção de Software",
+  "version": "1.0.0",
+  "description": "O objetivo deste projeto é transmitir os conceitos e um pouco da prática da Evolução e Manutenção de Software por meio de uma atividade gamificada.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
