@@ -13,8 +13,8 @@ layout: academic-cover
 ---
 ---
 layout: statement
-kicker: "[Infográfico] Software no cotidiano"
-title: Quando o software falha, o problema não fica só na tela.
+kicker: Pergunta de partida
+title: O que é qualidade?
 ---
 ---
 layout: statement
@@ -22,397 +22,296 @@ kicker: Interação
 title: Pense por 30 segundos — o que mais irrita você em um aplicativo?
 ---
 ---
+layout: define
+kicker: Definição de trabalho
+term: Qualidade de software
+definition: Software que <span class="accent2">atende às necessidades do cliente</span>.
+points:
+  - Executa com eficiência e confiabilidade
+  - Chega no prazo previsto
+  - Respeita o orçamento definido
+---
+---
 layout: agenda
 kicker: Objetivos da aula
-title: Hoje você vai conectar qualidade a decisões reais
+title: Hoje você vai conectar qualidade a decisões concretas
 items:
-  - { topic: Conceituar, desc: reconhecer diferentes visões de qualidade }
-  - { topic: Diferenciar, desc: separar processo e produto }
-  - { topic: Avaliar, desc: observar atributos e métricas }
-  - { topic: Decidir, desc: "equilibrar qualidade, prazo e custo" }
-  - { topic: Aplicar, desc: analisar situações do cotidiano }
+  - { topic: Definir, desc: "reconhecer qualidade de software" }
+  - { topic: Gerenciar, desc: "distinguir organização e projeto" }
+  - { topic: Planejar, desc: "identificar elementos do plano" }
+  - { topic: Avaliar, desc: "formular perguntas de controle" }
+  - { topic: Relacionar, desc: "conectar processo e produto" }
 ---
 ---
 layout: section
 index: "01"
-kicker: Fundamentos
-title: Afinal, o que é qualidade?
-subtitle: Uma palavra comum, várias lentes possíveis.
----
----
-layout: reference
-kicker: "[Comparação] Cinco lentes"
-title: Qualidade muda conforme o ponto de vista
-items:
-  - { term: Transcendental, desc: "Reconhecemos, mesmo sem definir claramente" }
-  - { term: Usuário, desc: O produto ajuda a atingir objetivos }
-  - { term: Fabricante, desc: A implementação segue as especificações }
-  - { term: Produto, desc: Funções e recursos indicam qualidade }
-  - { term: Valor, desc: Benefício percebido justifica o preço }
----
----
-layout: vs
-kicker: "[Comparação] Duas dimensões"
-title: Projetar bem não garante entregar bem
-left:
-  title: Qualidade de projeto
-  items:
-    - Funções atendem aos requisitos
-    - Desempenho desejado foi especificado
-right:
-  title: Qualidade de conformidade
-  items:
-    - Implementação segue o projeto
-    - Sistema atinge necessidades e metas
-label: e
+kicker: Gestão da qualidade
+title: Qualidade precisa ser administrada
+subtitle: Organização e projeto têm responsabilidades complementares.
 ---
 ---
 layout: feature
-kicker: Definição operacional
-title: Qualidade de software combina três pilares
+kicker: "[Visual sugerido: triângulo de compromissos]"
+title: Qualidade reúne três compromissos
 columns: 3
 features:
-  - { icon: "lucide:workflow", title: Gestão efetiva, desc: Cria estrutura e reduz o caos }
-  - { icon: "lucide:package-check", title: Produto útil, desc: Entrega funções e confiabilidade }
-  - { icon: "lucide:badge-dollar-sign", title: Valor mensurável, desc: Beneficia produtores e usuários }
+  - { icon: "lucide:users", title: Necessidades, desc: "Atender ao cliente" }
+  - { icon: "lucide:gauge", title: Execução, desc: "Ser eficiente e confiável" }
+  - { icon: "lucide:calendar-check", title: Entrega, desc: "Cumprir prazo e orçamento" }
+---
+---
+layout: statement
+kicker: Resposta prática
+title: Gerencie a qualidade nos níveis organizacional e de projeto.
 ---
 ---
 layout: vs
-kicker: "[Comparação] Causa e resultado"
-title: Processo prepara; produto comprova
+kicker: "[Comparação] Dois níveis"
+title: A organização define; o projeto verifica
 left:
-  title: Qualidade do processo
+  title: Organização
   items:
-    - Práticas e revisões orientam a construção
-    - Gestão evita decisões caóticas
+    - Define processos
+    - Estabelece padrões
 right:
-  title: Qualidade do produto
+  title: Projeto
   items:
-    - Atende requisitos explícitos
-    - Cumpre expectativas implícitas
-    - Funciona com confiança e precisão
-label: gera
+    - Verifica processos e padrões
+    - Planeja objetivos e artefatos
+label: complementa
 ---
 ---
-layout: columns
-kicker: "[Comparação] Valor compartilhado"
-title: Qualidade cria espaço para evoluir
-columns:
-  - title: Para quem produz
-    items:
-      - Menos manutenção, correções e suporte
-      - Mais tempo para novas aplicações
-  - title: Para quem usa
-    items:
-      - Processos ficam mais ágeis
-      - Informações tornam-se mais disponíveis
-      - O produto entrega benefício real
+layout: reference
+kicker: Referência rápida
+title: O que os padrões organizacionais podem definir?
+items:
+  - { term: Processos, desc: "Como o trabalho acontece" }
+  - { term: Formulários, desc: "Como informações são registradas" }
+  - { term: Estilos e formatos, desc: "Como artefatos são apresentados" }
+  - { term: Procedimentos, desc: "Como tarefas são conduzidas" }
+  - { term: Documentação, desc: "Como decisões ficam registradas" }
+---
+---
+layout: vs
+kicker: "[Comparação] Referência da manufatura"
+title: Garantia e controle cumprem papéis diferentes
+left:
+  title: Garantia da qualidade
+  items:
+    - Define processos e padrões
+    - Introduz práticas na produção
+right:
+  title: Controle da qualidade
+  items:
+    - Aplica processos de qualidade
+    - Elimina produtos abaixo do nível
+label: e
+---
+---
+layout: steps
+kicker: "[Fluxo sugerido: práticas da indústria]"
+title: No software, a gestão combina quatro frentes
+steps:
+  - { title: Definir, desc: "procedimentos, processos e padrões", icon: "lucide:list-checks" }
+  - { title: Configurar, desc: "gerenciar configurações", icon: "lucide:settings" }
+  - { title: Verificar, desc: "executar atividades de verificação", icon: "lucide:search-check" }
+  - { title: Validar, desc: "executar atividades de validação", icon: "lucide:badge-check" }
+---
+---
+layout: statement
+kicker: "[Linha do tempo sugerida: ciclo do software]"
+title: A gestão da qualidade continua depois da entrega.
+---
+---
+layout: statement
+kicker: Objetividade
+title: A equipe de qualidade deve ser independente do desenvolvimento.
+---
+---
+layout: panels
+kicker: Responsabilidades da equipe
+title: A garantia da qualidade observa projeto e processo
+panels:
+  - { icon: "lucide:target", title: Resultados, items: ["Comparar padrões e objetivos"] }
+  - { icon: "lucide:files", title: Processo, items: ["Examinar documentos e tarefas"] }
+  - { icon: "lucide:circle-alert", title: Premissas, items: ["Detectar esquecimentos e suposições"] }
+  - { icon: "lucide:test-tube-diagonal", title: Liberação, items: ["Gerenciar testes de entrega"] }
 ---
 ---
 layout: section
 index: "02"
-kicker: Modelos de qualidade
-title: Qualidade tem vários fatores
-subtitle: Uma única nota não explica toda a experiência.
+kicker: Planejamento
+title: Qualidade desejada precisa virar plano
+subtitle: O plano liga expectativas, avaliação e responsabilidades.
 ---
 ---
-layout: columns
-kicker: "[Diagrama] Modelo de McCall"
-title: Três ângulos organizam os fatores
-columns:
-  - title: Operar
-    items:
-      - Experiência geral durante a operação
-  - title: Alterar
-    items:
-      - Mudanças sem destruir a qualidade
-  - title: Adaptar
-    items:
-      - Adaptação a novos ambientes
----
----
-layout: vs
-kicker: "[Comparação] ISO 25010"
-title: A norma observa uso e produto
-left:
-  title: Qualidade em uso
-  items:
-    - Observa usuários, contexto e objetivos
-    - Destaca satisfação e riscos
-right:
-  title: Qualidade do produto
-  items:
-    - Examina sistema estático e dinâmico
-    - Inclui requisitos funcionais
-    - Inclui requisitos não funcionais
-label: +
+layout: define
+kicker: Documento orientador
+term: Plano de qualidade
+definition: Define as <span class="accent2">qualidades desejadas</span> do software.
+points:
+  - Explicita como cada qualidade será avaliada
+  - Orienta o trabalho do projeto
 ---
 ---
 layout: reference
-kicker: "[Checklist] Qualidade em uso"
-title: O contexto revela cinco características
+kicker: Estrutura do plano
+title: Cinco conteúdos organizam o planejamento
 items:
-  - { term: Eficácia, desc: Metas atingidas com precisão e completude }
-  - { term: Eficiência, desc: Recursos usados para atingir as metas }
-  - { term: Satisfação, desc: "Utilidade, confiança, prazer e conforto" }
-  - { term: Ausência de riscos, desc: "Danos econômicos, humanos e ambientais mitigados" }
-  - { term: Cobertura, desc: Completude e flexibilidade no contexto }
----
----
-layout: panels
-kicker: "[Infográfico] Qualidade do produto · 1/2"
-title: Valor funcional também depende da interação
-panels:
-  - { icon: "lucide:list-checks", title: Adequação funcional, items: ["Completo, correto e apropriado"] }
-  - { icon: "lucide:timer", title: Desempenho, items: ["Tempo, recursos e capacidade"] }
-  - { icon: "lucide:plug-zap", title: Compatibilidade, items: [Coexistência e interoperabilidade] }
-  - { icon: "lucide:mouse-pointer-click", title: Usabilidade, items: ["Aprender, operar e acessar"] }
----
----
-layout: panels
-kicker: "[Infográfico] Qualidade do produto · 2/2"
-title: Confiança hoje; evolução amanhã
-panels:
-  - { icon: "lucide:heart-pulse", title: Confiabilidade, items: ["Disponível, tolerante e recuperável"] }
-  - { icon: "lucide:lock-keyhole", title: Segurança, items: ["Confidencialidade, integridade e autenticidade"] }
-  - { icon: "lucide:wrench", title: Manutenibilidade, items: ["Modular, reutilizável e testável"] }
-  - { icon: "lucide:package-open", title: Portabilidade, items: ["Adaptável, instalável e substituível"] }
----
----
-layout: columns
-kicker: Discussão rápida · cenários hipotéticos
-title: Qual fator está em jogo?
-columns:
-  - { title: WhatsApp, items: [A ação confunde o usuário] }
-  - { title: Pix, items: [A confirmação aparece duas vezes] }
-  - { title: Jogo, items: [A instalação falha em outra plataforma] }
+  - { term: Introdução, desc: "Descrição, mercado e expectativas de qualidade" }
+  - { term: Produto, desc: "Datas, responsabilidades, distribuição e manutenção" }
+  - { term: Processos, desc: "Desenvolvimento, serviço e padrões aplicáveis" }
+  - { term: Objetivos, desc: "Atributos críticos, metas e justificativas" }
+  - { term: Riscos, desc: "Principais ameaças e ações de resposta" }
 ---
 ---
 layout: section
 index: "03"
-kicker: Avaliação
-title: Qualidade precisa deixar sinais
-subtitle: Observar primeiro; medir quando fizer sentido.
+kicker: Julgamento
+title: Avaliar software envolve subjetividade
+subtitle: Nem toda qualidade cabe em uma medida direta.
 ---
 ---
-layout: columns
-kicker: "[Checklist] Avaliação de usabilidade"
-title: Transforme atributos em perguntas observáveis
-columns:
-  - title: Começar
-    items:
-      - A função parece adequada e fácil de aprender?
-  - title: Interagir
-    items:
-      - A tarefa flui e previne erros?
-  - title: Incluir
-    items:
-      - A aparência inclui diferentes usuários?
+layout: statement
+kicker: "[Visual sugerido: régua]"
+title: Quais atributos permitem verificar a qualidade de uma régua?
 ---
-
-<!-- Use usuários representativos, tarefas estruturadas, observação e questionários. -->
 ---
-layout: steps
-kicker: "[Fluxograma] Avaliação quantitativa"
-title: Métricas sinalizam; a equipe investiga
-steps:
-  - { title: Escolher, desc: selecione o fator de qualidade }
-  - { title: Observar, desc: defina manifestações reconhecíveis }
-  - { title: Medir, desc: colete atributos internos ou externos }
-  - { title: Comparar, desc: use uma faixa aceitável }
-  - { title: Investigar, desc: examine valores fora da faixa }
+layout: statement
+kicker: "[Visual sugerido: pintura]"
+title: Quais atributos permitem verificar a qualidade de uma obra de arte?
+---
+---
+layout: vs
+kicker: "[Comparação] Natureza do produto"
+title: O objeto muda; a avaliação também
+left:
+  title: Produto concreto
+  items:
+    - Qualidade mais objetiva
+    - Atributos diretamente observáveis
+right:
+  title: Produto autoral ou abstrato
+  items:
+    - Qualidade mais subjetiva
+    - Julgamento depende dos atributos
+label: enquanto
+---
+---
+layout: panels
+kicker: Por que isso acontece?
+title: Software não se compara diretamente a objetos concretos
+panels:
+  - { icon: "lucide:file-question", title: Requisitos, items: ["Podem ser incompletos ou ambíguos"] }
+  - { icon: "lucide:users-round", title: Interesses, items: ["Especificações cobrem poucos envolvidos"] }
+  - { icon: "lucide:ruler", title: Medição, items: ["Certas propriedades resistem à medida"] }
+---
+---
+layout: statement
+kicker: Discussão rápida
+title: Se mantenibilidade é difícil de medir, como avaliá-la?
 ---
 ---
 layout: section
 index: "04"
-kicker: Decisões difíceis
-title: O dilema da qualidade
-subtitle: Nem rejeição imediata, nem perfeição infinita.
+kicker: Controle da qualidade
+title: Perguntas tornam o julgamento mais explícito
+subtitle: A equipe transforma expectativas em critérios de análise.
+---
+---
+layout: feature
+kicker: "[Mapa sugerido: atributos]"
+title: Funcionalidade não encerra a avaliação
+columns: 4
+features:
+  - { icon: "lucide:shield-check", title: Confiabilidade, desc: "Pronto para uso" }
+  - { icon: "lucide:gauge", title: Desempenho, desc: "Aceitável no uso normal" }
+  - { icon: "lucide:mouse-pointer-click", title: Usabilidade, desc: "Possível de usar" }
+  - { icon: "lucide:wrench", title: Manutenibilidade, desc: "Difícil de medir" }
+---
+---
+layout: reference
+kicker: Perguntas de controle
+title: Primeiro, examine o uso esperado
+items:
+  - { term: Testes, desc: "O software foi devidamente testado?" }
+  - { term: Requisitos, desc: "Todos foram implementados?" }
+  - { term: Confiabilidade, desc: "Está pronto para uso?" }
+  - { term: Desempenho, desc: "É aceitável no uso normal?" }
+  - { term: Usabilidade, desc: "O sistema é utilizável?" }
 ---
 ---
 layout: vs
-kicker: "[Balança] Prazo, custo e qualidade"
-title: Os extremos enterram o produto
+kicker: Perguntas de controle
+title: Depois, examine estrutura e conformidade
 left:
-  title: Qualidade insuficiente
+  title: Estrutura
   items:
-    - Usuários rejeitam; retrabalho cresce
-    - Riscos e custos aumentam
+    - Está bem estruturado?
+    - É compreensível?
 right:
-  title: Perfeição absoluta
+  title: Padrões
   items:
-    - Entrega demora demais
-    - Recursos podem acabar
-    - O mercado segue adiante
-label: equilíbrio
----
----
-layout: vs
-kicker: "[Comparação] Bom o suficiente"
-title: Contexto decide; conveniência não
-left:
-  title: Pode ser aceitável
-  items:
-    - Funções centrais têm alta qualidade
-    - Erros periféricos serão melhorados
-right:
-  title: Pode ser negligência
-  items:
-    - O domínio envolve vidas
-    - A reputação pode não sobreviver
-    - Litígios podem inviabilizar a empresa
-label: risco
----
----
-layout: panels
-kicker: "[Infográfico] Custo da qualidade"
-title: Pagar antes costuma custar menos
-panels:
-  - icon: "lucide:shield"
-    title: Prevenção
-    items: ["Planejamento, modelos, testes e treinamento"]
-  - icon: "lucide:search-check"
-    title: Avaliação
-    items: ["Revisões, métricas, testes e depuração"]
-  - icon: "lucide:triangle-alert"
-    title: Falhas internas
-    items: ["Reparo, efeitos colaterais e análise"]
-  - icon: "lucide:siren"
-    title: Falhas externas
-    items: ["Suporte, garantia, reputação e negócios"]
----
----
-layout: stats
-kicker: "[Comparação] Mesmo defeito, fases diferentes"
-title: Corrigir tarde multiplica o custo
-columns: 3
-stats:
-  - { value: 977, unit: "US$", label: correção na codificação, tone: good }
-  - { value: 7136, unit: "US$", label: correção nos testes, tone: warn }
-  - { value: 14102, unit: "US$", label: correção na manutenção, tone: bad }
----
----
-layout: stats
-kicker: "[Caso real] Software médico"
-title: Baixa qualidade também machuca
-columns: 3
-stats:
-  - { value: 28, label: pacientes receberam doses excessivas, tone: warn }
-  - { value: 5, label: mortes por contaminação radioativa, tone: bad }
-  - { value: 15, label: complicações graves, tone: bad }
----
----
-layout: columns
-kicker: "[Mapa de consequências] Além do bug"
-title: Decisões técnicas e administrativas dividem a responsabilidade
-columns:
-  - title: Responsabilidade civil
-    items:
-      - Negligência e parcerias rompidas podem gerar litígios
-  - title: Segurança
-    items:
-      - Bugs surgem na implementação; falhas, na arquitetura
-  - title: Administração
-    items:
-      - Estimativas evitam prazos absurdos
-      - Cronogramas e riscos exigem realismo
----
----
-layout: section
-index: "05"
-kicker: Construção consciente
-title: Qualidade não aparece por acaso
-subtitle: Ela é produzida durante todo o ciclo.
----
----
-layout: panels
-kicker: "[Diagrama] Quatro frentes"
-title: A qualidade nasce de trabalho coordenado
-panels:
-  - { icon: "lucide:blocks", title: Métodos, items: [Entender e projetar bem] }
-  - { icon: "lucide:calendar-check", title: Gerenciamento, items: ["Planejar prazo, mudanças e riscos"] }
-  - { icon: "lucide:scan-search", title: Controle, items: ["Revisar, testar e corrigir"] }
-  - { icon: "lucide:clipboard-check", title: Garantia, items: ["Auditar, relatar e dar confiança"] }
+    - Segue padrões de programação?
+    - Segue padrões de documentação?
+label: e
 ---
 ---
 layout: steps
-kicker: "[Fluxograma] Previsão de defeitos"
-title: Dados ajudam a encontrar componentes suspeitos
+kicker: "[Fluxo sugerido: processo → produto]"
+title: Bons processos favorecem bons produtos
 steps:
-  - { title: Reunir, desc: métricas e defeitos conhecidos }
-  - { title: Aprender, desc: identificar relações preditivas }
-  - { title: Classificar, desc: estimar componentes mais propensos }
-  - { title: Priorizar, desc: concentrar revisão e testes }
----
----
-layout: vs
-kicker: "[Comparação] Controle e garantia"
-title: Um verifica produtos; outro verifica o sistema de qualidade
-left:
-  title: Controle da qualidade
-  items:
-    - Revisa modelos, código, lógica, dados e interfaces
-    - Ajusta com métricas e feedback
-right:
-  title: Garantia da qualidade
-  items:
-    - Sustenta métodos e gestão
-    - Audita ações de controle
-    - Informa decisões administrativas
-label: juntos
+  - { title: Definir, desc: "processos adequados", icon: "lucide:route" }
+  - { title: Aplicar, desc: "práticas e padrões", icon: "lucide:play" }
+  - { title: Verificar, desc: "trabalho e resultados", icon: "lucide:scan-search" }
+  - { title: Favorecer, desc: "software de qualidade", icon: "lucide:badge-check" }
 ---
 ---
 layout: default
-kicker: Exercício · 5 perguntas conceituais
-title: Verifique seu entendimento
+kicker: Exercício 1 · Conceitos
+title: Responda em uma frase
 ---
 
-<v-clicks>
-
-1. Como usuário e fabricante enxergam qualidade?
-2. Processo bom garante produto bom? Justifique.
-3. Por que métricas medem qualidade indiretamente?
-4. Quando “bom o suficiente” vira negligência?
-5. Controle e garantia exercem quais papéis?
-
-</v-clicks>
-
-<!-- Peça respostas curtas e exemplos fundamentados nos conceitos da aula. -->
+1. O que define qualidade de software?
+2. Como organização e projeto se diferenciam?
+3. Como garantia e controle se distinguem?
+4. Por que avaliar software é subjetivo?
+5. Como processos influenciam o produto?
 ---
-layout: panels
-kicker: Exercício · 3 estudos de caso
-title: Aplique os fatores ao contexto
-panels:
-  - { icon: "lucide:landmark", title: Pix hipotético, items: [Confirma duas vezes; qual fator avaliar?] }
-  - { icon: "lucide:graduation-cap", title: Sistema acadêmico, items: ["Funciona, mas ninguém entende; falta o quê?"] }
-  - { icon: "lucide:stethoscope", title: Equipamento médico, items: [Bug raro conhecido; lançar ou adiar?] }
+layout: default
+kicker: Exercício 2 · Casos curtos
+title: Analise cada situação
+---
+
+1. Aplicativo funcional, mas lento: qualidade suficiente?
+2. Sistema confiável, porém difícil de usar: aprove?
+3. Projeto sem padrões: qual risco permanece?
+---
+layout: steps
+kicker: Exercício 3 · Desafio em grupo
+title: Criem uma ficha de controle para um aplicativo
+steps:
+  - { title: Escolham, desc: "um aplicativo conhecido", icon: "lucide:smartphone" }
+  - { title: Perguntem, desc: "testes, requisitos e confiabilidade", icon: "lucide:circle-help" }
+  - { title: Avaliem, desc: "desempenho, usabilidade e estrutura", icon: "lucide:clipboard-check" }
+  - { title: Concluam, desc: "qualidade e justificativa", icon: "lucide:message-square-text" }
 ---
 ---
 layout: default
-kicker: Exercício · desafio em grupo
-title: Monte um plano mínimo de qualidade
----
-
-<v-clicks>
-
-- Escolham um sistema usado pela turma
-- Priorizem três fatores de qualidade
-- Criem uma pergunta observável por fator
-- Classifiquem um custo de qualidade
-- Defendam o equilíbrio escolhido
-
-</v-clicks>
-
-<!-- Cada grupo apresenta a decisão e o risco que aceitou. -->
----
-layout: default
+kicker: Síntese
 title: O que você deve lembrar desta aula
 ---
 
-- Qualidade conecta processo, produto, utilidade e valor
-- Uso e produto exigem perspectivas complementares
-- Fatores tornam qualidade discutível e observável
-- Métricas sinalizam; pessoas interpretam o contexto
-- Prevenir custa menos que corrigir tarde
-- Prazo nunca elimina riscos e responsabilidades
-- Qualidade nasce das escolhas feitas desde o início
+- Qualidade atende necessidades do cliente
+- Execução deve ser eficiente e confiável
+- Prazo e orçamento também importam
+- Organizações definem processos e padrões
+- Projetos verificam aplicação e planejam metas
+- Avaliar software envolve julgamento
+- Bons processos favorecem bons produtos
+---
+layout: end
+title: Qualidade nasce de processos conscientes e perguntas bem feitas.
+subtitle: Continue perguntando o que significa “bom” neste contexto.
+contact: filipe.fernandes@ifsudestemg.edu.br
+---
