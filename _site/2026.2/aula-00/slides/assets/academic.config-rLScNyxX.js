@@ -1,0 +1,1 @@
+var e={courseName:`Bacharelado em Sistemas de Informação`,subjectName:`Engenharia de Software II`,subjectAcronym:`ESWII`,subjectCode:`INF03086`,professorName:`Filipe Fernandes, PhD`,professorContact:`filipe.fernandes@ifsudestemg.edu.br`,presentationTitle:`Programa Analítico da Disciplina`};export{e as t};
