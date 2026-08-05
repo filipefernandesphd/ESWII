@@ -1,0 +1,36 @@
+{
+  "$schema": "./course.config.schema.json",
+  "schemaVersion": 1,
+  "course": {
+    "name": "Engenharia de Software II",
+    "acronym": "ESWII",
+    "code": "INF03086 ",
+    "program": "Bacharelado em Sistemas de Informação",
+    "institution": {
+      "name": "IF Sudeste MG",
+      "campus": "Campus Manhuaçu",
+      "url": "https://www.ifsudestemg.edu.br/manhuacu"
+    },
+    "modality": "Presencial",
+    "workloadHours": 60,
+    "instructor": {
+      "name": "Filipe Fernandes, PhD",
+      "url": "https://filipefernandesphd.com"
+    }
+  },
+  "repository": {
+    "provider": "github",
+    "owner": "filipefernandesphd",
+    "name": "my-subject-repository",
+    "url": "https://github.com/filipefernandesphd/my-subject-repository"
+  },
+  "site": {
+    "currentSemester": "2026.2",
+    "locale": "pt-BR",
+    "timezone": "America/Sao_Paulo"
+  },
+  "slides": {
+    "templateRepository": "git@github.com:filipefernandesphd/my-slidev-template.git",
+    "templateRevision": "5dc52cd82013de4012c33c03f46e9aa9a25e5ab2"
+  }
+}
