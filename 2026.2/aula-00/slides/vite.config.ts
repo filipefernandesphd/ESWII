@@ -5,10 +5,7 @@ import { fileURLToPath } from "node:url";
 import type { Plugin, UserConfig } from "vite";
 
 const SLIDES_DIRECTORY = path.dirname(fileURLToPath(import.meta.url));
-const SEMESTER_ASSETS_DIRECTORY = path.resolve(
-  SLIDES_DIRECTORY,
-  "../../assets",
-);
+const SEMESTER_ASSETS_DIRECTORY = path.resolve(SLIDES_DIRECTORY, "../../assets");
 const PUBLIC_ASSETS_PREFIX = "/assets/";
 
 function sharedSemesterAssets(): Plugin {
