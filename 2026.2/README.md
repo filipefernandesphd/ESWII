@@ -1,17 +1,15 @@
-# Disciplina Exemplo (EXEMPLO) — 2026/2
+# Engenharia de Software II (ESWII) — 2026/2
 
 [← Todos os semestres](../)
 
-Semestre de exemplo da base reutilizável.
-
 ---
 
-**Instituição**: [Instituição Exemplo - Campus Exemplo](https://example.com/instituicao)
-**Curso**: Curso Exemplo
-**Disciplina**: COD000 - Disciplina Exemplo
+**Instituição**: [IF Sudeste MG - Campus Manhuaçu;](https://www.ifsudestemg.edu.br/manhuacu)
+**Curso**: Bacharelado em Sistemas de Informação
+**Disciplina**: INF03086 - Engenharia de Software II
 **Modalidade**: Presencial
 **Carga horária**: 60h
-**Professor**: [Nome do Professor](https://example.com/professor)
+**Professor**: [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
 
 ---
 
