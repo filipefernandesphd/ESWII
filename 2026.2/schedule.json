@@ -7,17 +7,318 @@
   },
   "entries": [
     {
-      "day": "Segunda",
-      "date": "03/08/2026",
-      "module": "Módulo inicial",
+      "day": "Quarta",
+      "date": "05/08/2026",
+      "module": "MD0: Apresentação da disciplina",
       "topic": "Apresentação da disciplina",
       "id": "aula-00"
     },
     {
+      "day": "Quinta",
+      "date": "06/08/2026",
+      "module": "MD1: Qualidade de Software",
+      "topic": "Introdução à qualidade de Software",
+      "id": ""
+    },
+    {
       "day": "Quarta",
-      "date": "05/08/2026",
+      "date": "12/08/2026",
       "module": "",
-      "topic": "Evento acadêmico sem página",
+      "topic": "Refatoração e code smells",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "13/08/2026",
+      "module": "",
+      "topic": "Refatoração e code smells",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "19/08/2026",
+      "module": "",
+      "topic": "Refatoração e code smells",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "20/08/2026",
+      "module": "",
+      "topic": "Princípios SOLID",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "26/08/2026",
+      "module": "",
+      "topic": "Princípios SOLID",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "27/08/2026",
+      "module": "",
+      "topic": "Modelos de maturidade: CMMI e MPS.BR",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "02/09/2026",
+      "module": "",
+      "topic": "Hands-on",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "03/09/2026",
+      "module": "",
+      "topic": "AVALIAÇÃO 1",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "09/09/2026",
+      "module": "",
+      "topic": "[AULA CANCELADA]",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "10/09/2026",
+      "module": "",
+      "topic": "[AULA CANCELADA]",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "16/09/2026",
+      "module": "",
+      "topic": "[AULA CANCELADA]",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "17/09/2026",
+      "module": "",
+      "topic": "[AULA CANCELADA]",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "23/09/2026",
+      "module": "",
+      "topic": "[AULA CANCELADA]",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "24/09/2026",
+      "module": "",
+      "topic": "[AULA CANCELADA]",
+      "id": ""
+    },
+    {
+      "day": "Sábado",
+      "date": "26/09/2026",
+      "module": "",
+      "topic": "Atividade de Informática",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "30/09/2026",
+      "module": "MD2: Teste de Software",
+      "topic": "Introdução à Verificação, Validação e Teste",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "01/10/2026",
+      "module": "",
+      "topic": "Tipos de testes",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "07/10/2026",
+      "module": "",
+      "topic": "Princípios e test smells",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "08/10/2026",
+      "module": "",
+      "topic": "Desenvolvimento dirigido por testes (TDD)",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "14/10/2026",
+      "module": "",
+      "topic": "Jest: primeiro contato",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "15/10/2026",
+      "module": "",
+      "topic": "Jest: tratamento de exceções, funções after e before, testes aninhados e parametrizados",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "21/10/2026",
+      "module": "",
+      "topic": "Jest: mocks",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "22/10/2026",
+      "module": "",
+      "topic": "Hands-on",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "28/10/2026",
+      "module": "",
+      "topic": "[AULA CANCELADA] 28 - Dia do Servidor Público",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "29/10/2026",
+      "module": "",
+      "topic": "AVALIAÇÃO 2",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "04/11/2026",
+      "module": "MD3: Evolução de Software",
+      "topic": "Manutenção de software",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "05/11/2026",
+      "module": "",
+      "topic": "[AULA CANCELADA] 05 - Aniversário de Manhuaçu",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "11/11/2026",
+      "module": "",
+      "topic": "Versionamento de código com git",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "11/11/2026",
+      "module": "",
+      "topic": "[REPOSIÇÃO - 4 AULAS]",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "12/11/2026",
+      "module": "",
+      "topic": "Versionamento de código com git",
+      "id": ""
+    },
+    {
+      "day": "Sábado",
+      "date": "14/11/2026",
+      "module": "",
+      "topic": "[AULA CANCELADA]",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "18/11/2026",
+      "module": "",
+      "topic": "AVALIAÇÃO 3",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "18/11/2026",
+      "module": "",
+      "topic": "[REPOSIÇÃO - 5 AULAS]",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "19/11/2026",
+      "module": "MD4: Projeto Final",
+      "topic": "Desenvolvimento do projeto final",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "25/11/2026",
+      "module": "",
+      "topic": "Desenvolvimento do projeto final",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "26/11/2026",
+      "module": "",
+      "topic": "Desenvolvimento do projeto final",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "02/12/2026",
+      "module": "",
+      "topic": "Desenvolvimento do projeto final",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "03/12/2026",
+      "module": "",
+      "topic": "Entrega do relatório",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "09/12/2026",
+      "module": "",
+      "topic": "Apresentação",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "09/12/2026",
+      "module": "",
+      "topic": "[REPOSIÇÃO - 5 AULAS] Revisão",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "10/12/2026",
+      "module": "",
+      "topic": "Revisão",
+      "id": ""
+    },
+    {
+      "day": "Sábado",
+      "date": "12/12/2026",
+      "module": "",
+      "topic": "Atividade de Informática",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "16/12/2026",
+      "module": "",
+      "topic": "Revisão",
       "id": ""
     }
   ]
