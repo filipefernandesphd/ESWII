@@ -12,319 +12,190 @@ routerMode: hash
 layout: academic-cover
 ---
 ---
-layout: statement
-kicker: Pergunta de partida
-title: O que é qualidade?
+layout: bigtype
+kicker: Introdução
+title: O que é <em>qualidade</em>?
 ---
 ---
 layout: statement
-kicker: Conceito central
+kicker: Introdução
 title: O que é qualidade de software?
 ---
 ---
-layout: bigtype
-kicker: Pense por 30 segundos
-title: O que mais irrita você em um aplicativo?
----
----
 layout: define
-kicker: Definição de trabalho
 term: Qualidade de software
-definition: Software que <span class="accent2">atende às necessidades do cliente</span>.
+definition: Atender às <span class="accent2">necessidades dos clientes</span>.
 points:
-  - Executa com eficiência e confiabilidade
-  - Chega no prazo previsto
-  - Respeita o orçamento definido
+  - Executar com eficiência e confiabilidade
+  - Entregar no prazo
+  - Permanecer dentro do orçamento
 ---
 ---
-layout: agenda
-kicker: Objetivos da aula
-title: Hoje você vai conectar qualidade a decisões concretas
+layout: reference
+title: Como garantir qualidade?
 items:
-  - { topic: Definir, desc: "reconhecer qualidade de software" }
-  - { topic: Gerenciar, desc: "distinguir organização e projeto" }
-  - { topic: Planejar, desc: "identificar elementos do plano" }
-  - { topic: Avaliar, desc: "formular perguntas de controle" }
-  - { topic: Relacionar, desc: "conectar processo e produto" }
----
----
-layout: section
-index: "01"
-kicker: Gestão da qualidade
-title: Qualidade precisa ser administrada
-subtitle: Organização e projeto têm responsabilidades complementares.
----
----
-layout: feature
-kicker: "[Visual sugerido: triângulo de compromissos]"
-title: Qualidade reúne três compromissos
-columns: 3
-features:
-  - { icon: "lucide:users", title: Necessidades, desc: "Atender ao cliente" }
-  - { icon: "lucide:gauge", title: Execução, desc: "Ser eficiente e confiável" }
-  - { icon: "lucide:calendar-check", title: Entrega, desc: "Cumprir prazo e orçamento" }
----
----
-layout: bigtype
-kicker: Resposta prática
-title: Gerencie a qualidade na <em>organização</em> e no projeto.
----
----
-layout: vs
-kicker: "[Comparação] Dois níveis"
-title: A organização define; o projeto verifica
-left:
-  title: Organização
-  items:
-    - Define processos
-    - Estabelece padrões
-right:
-  title: Projeto
-  items:
-    - Verifica processos e padrões
-    - Planeja metas e artefatos
-label: complementa
+  - { term: Cliente, desc: "Atender às necessidades" }
+  - { term: Execução, desc: "Eficiência e confiabilidade" }
+  - { term: Entrega, desc: "Prazo e orçamento" }
+  - { term: Gestão, desc: "Organização e projeto" }
 ---
 ---
 layout: default
-kicker: Referência rápida
-title: Padrões organizacionais podem cobrir
+title: Aspecto organizacional
 ---
 
-<Tags :items="['Processos', 'Formulários', 'Estilos e formatos', 'Procedimentos', 'Documentação']" />
-
-<!-- Relacione cada item aos artefatos já usados pelos estudantes. -->
----
-layout: vs
-kicker: "[Comparação] Referência da manufatura"
-title: Garantia e controle cumprem papéis diferentes
-left:
-  title: Garantia da qualidade
-  items:
-    - Define processos e padrões
-    - Introduz práticas na fabricação
-right:
-  title: Controle da qualidade
-  items:
-    - Aplica processos de qualidade
-    - Elimina produtos abaixo do nível
-label: e
----
----
-layout: steps
-kicker: "[Fluxograma sugerido: práticas da indústria]"
-title: No software, a gestão combina quatro frentes
-steps:
-  - { title: Definir, desc: "procedimentos, processos e padrões", icon: "lucide:list-checks" }
-  - { title: Configurar, desc: "gerenciar configurações", icon: "lucide:settings" }
-  - { title: Verificar, desc: "realizar atividades de verificação", icon: "lucide:search-check" }
-  - { title: Validar, desc: "realizar atividades de validação", icon: "lucide:badge-check" }
----
+- Definir processos de desenvolvimento
+- Padronizar formulários, estilos e formatos
+- Definir procedimentos e documentação
 ---
 layout: default
-kicker: "[Linha do tempo sugerida: ciclo do software]"
-title: A gestão continua depois da entrega
+title: Aspecto de projeto
 ---
 
-<Callout icon="lucide:repeat-2">Qualidade é gerenciada durante e após a entrega.</Callout>
-
-<!-- Destaque que a responsabilidade não termina com o lançamento. -->
+- Verificar a aplicação de processos e padrões
+- Definir planos, metas e artefatos de qualidade
 ---
-layout: statement
-kicker: Objetividade
-title: A equipe de qualidade deve ser independente do desenvolvimento.
----
----
-layout: panels
-kicker: Responsabilidades da equipe
-title: A garantia da qualidade observa projeto e processo
-panels:
-  - { icon: "lucide:target", title: Resultados, items: ["Comparar padrões e objetivos"] }
-  - { icon: "lucide:files", title: Processo, items: ["Examinar documentos e tarefas"] }
-  - { icon: "lucide:circle-alert", title: Premissas, items: ["Detectar esquecimentos e suposições"] }
-  - { icon: "lucide:test-tube-diagonal", title: Liberação, items: ["Gerenciar testes de entrega"] }
----
----
-layout: section
-index: "02"
-kicker: Planejamento
-title: Qualidade desejada precisa virar plano
-subtitle: O plano liga expectativas, avaliação e responsabilidades.
+layout: define
+term: Garantia da qualidade
+definition: Define <span class="accent2">processos e padrões</span> na manufatura.
+points:
+  - Busca produtos de alta qualidade
+  - Introduz processos na fabricação
 ---
 ---
 layout: define
-kicker: Documento orientador
+term: Controle da qualidade
+definition: Aplica os <span class="accent2">processos de qualidade</span>.
+points:
+  - Elimina produtos abaixo do nível exigido
+---
+---
+layout: default
+title: Indústrias de software
+---
+
+- Definir procedimentos, processos e padrões
+- Gerenciar configurações
+- Realizar verificação
+- Realizar validação
+---
+layout: bigtype
+kicker: Gerenciamento da qualidade
+title: Acontece <em>durante</em> e após a entrega.
+---
+---
+layout: default
+title: Gerenciamento e desenvolvimento
+---
+
+<Callout icon="lucide:image">[IMAGEM: gerenciamento da qualidade e desenvolvimento de software]</Callout>
+---
+layout: reference
+title: Equipe — resultados e documentação
+items:
+  - { term: Resultados, desc: "Conferir padrões e metas organizacionais" }
+  - { term: Documentação, desc: "Verificar tarefas registradas por cada equipe" }
+---
+---
+layout: reference
+title: Equipe — continuidade e lançamento
+items:
+  - { term: Continuidade, desc: "Detectar esquecimentos e suposições incorretas" }
+  - { term: Lançamento, desc: "Gerenciar o processo de testes" }
+---
+---
+layout: bigtype
+kicker: QA · Quality Assurance
+title: A equipe deve ser independente do desenvolvimento.
+subtitle: Assim, mantém uma visão objetiva da qualidade.
+---
+---
+layout: define
 term: Plano de qualidade
 definition: Define as <span class="accent2">qualidades desejadas</span> do software.
 points:
-  - Explicita como cada qualidade será avaliada
-  - Orienta o trabalho do projeto
+  - Descreve como serão avaliadas
 ---
 ---
 layout: reference
-kicker: Estrutura do plano
-title: Cinco conteúdos organizam o planejamento
+kicker: Planejamento da qualidade
+title: Produto
 items:
   - { term: Introdução, desc: "Descrição, mercado e expectativas de qualidade" }
-  - { term: Produto, desc: "Datas, responsabilidades, distribuição e manutenção" }
-  - { term: Processos, desc: "Desenvolvimento, serviço e padrões aplicáveis" }
-  - { term: Objetivos, desc: "Atributos críticos, metas e justificativas" }
-  - { term: Riscos, desc: "Principais ameaças e ações de resposta" }
+  - { term: Planos, desc: "Datas, responsabilidades, distribuição e manutenção" }
 ---
 ---
-layout: section
-index: "03"
-kicker: Julgamento
-title: Avaliar software envolve subjetividade
-subtitle: Nem toda qualidade cabe em uma medida direta.
+layout: reference
+kicker: Planejamento da qualidade
+title: Processos, metas e riscos
+items:
+  - { term: Processos, desc: "Desenvolvimento, serviço e padrões" }
+  - { term: Metas, desc: "Planos, atributos críticos e justificativas" }
+  - { term: Riscos, desc: "Principais riscos e ações de resposta" }
 ---
 ---
-layout: statement
-kicker: "[Imagem sugerida: régua]"
+layout: default
 title: Quais atributos verificam a qualidade de uma régua?
 ---
+
+<Callout icon="lucide:image">[IMAGEM: régua]</Callout>
 ---
-layout: statement
-kicker: "[Imagem sugerida: pintura]"
-title: Quais atributos verificam uma obra de arte?
+layout: default
+title: Quais atributos verificam se uma pintura é arte?
 ---
+
+<Callout icon="lucide:image">[IMAGEM: monalisa]</Callout>
 ---
 layout: vs
-kicker: "[Comparação] Natureza do produto"
-title: O objeto muda; a avaliação também
-left:
-  title: Produto concreto
-  items:
-    - Qualidade mais objetiva
-    - Atributos diretamente observáveis
-right:
-  title: Produto autoral ou abstrato
-  items:
-    - Qualidade mais subjetiva
-    - Julgamento depende dos atributos
+title: A natureza do produto muda a avaliação
+left: { title: Produtos concretos, items: ["Qualidade objetiva"] }
+right: { title: Produtos autorais ou abstratos, items: ["Qualidade subjetiva"] }
 label: enquanto
 ---
 ---
-layout: panels
-kicker: Por que isso acontece?
-title: Software não se compara diretamente a objetos concretos
-panels:
-  - { icon: "lucide:file-question", title: Requisitos, items: ["Podem ser incompletos ou ambíguos"] }
-  - { icon: "lucide:users-round", title: Interesses, items: ["Especificações cobrem parte dos envolvidos"] }
-  - { icon: "lucide:ruler", title: Medição, items: ["Certas propriedades resistem à medida"] }
+layout: default
+title: Software não é um objeto concreto
 ---
+
+- Requisitos completos e inequívocos são difíceis
+- Especificações cobrem somente parte dos stakeholders
+- Algumas características são impossíveis de medir
+- Manutenibilidade é um exemplo
 ---
 layout: statement
-kicker: Discussão rápida
-title: Se manutenibilidade é difícil de medir, como avaliá-la?
----
----
-layout: section
-index: "04"
-kicker: Controle da qualidade
-title: Perguntas tornam o julgamento mais explícito
-subtitle: A equipe transforma expectativas em critérios de análise.
----
----
-layout: feature
-kicker: "[Infográfico sugerido: atributos]"
-title: Funcionalidade não encerra a avaliação
-columns: 4
-features:
-  - { icon: "lucide:shield-check", title: Confiabilidade, desc: "Pronto para uso" }
-  - { icon: "lucide:gauge", title: Desempenho, desc: "Aceitável no uso normal" }
-  - { icon: "lucide:mouse-pointer-click", title: Usabilidade, desc: "Possível de usar" }
-  - { icon: "lucide:wrench", title: Manutenibilidade, desc: "Difícil de medir" }
----
----
-layout: reference
-kicker: Perguntas de controle
-title: Primeiro, examine o uso esperado
-items:
-  - { term: Testes, desc: "O software foi devidamente testado?" }
-  - { term: Requisitos, desc: "Todos foram implementados?" }
-  - { term: Confiabilidade, desc: "Está pronto para uso?" }
-  - { term: Desempenho, desc: "É aceitável no uso normal?" }
-  - { term: Usabilidade, desc: "O sistema é utilizável?" }
----
----
-layout: vs
-kicker: Perguntas de controle
-title: Depois, examine estrutura e conformidade
-left:
-  title: Estrutura
-  items:
-    - Está bem estruturado?
-    - É compreensível?
-right:
-  title: Padrões
-  items:
-    - Segue padrões de programação?
-    - Segue padrões de documentação?
-label: e
----
----
-layout: steps
-kicker: "[Fluxograma sugerido: processo → produto]"
-title: Bons processos favorecem bons produtos
-steps:
-  - { title: Definir, desc: "processos adequados", icon: "lucide:route" }
-  - { title: Aplicar, desc: "práticas e padrões", icon: "lucide:play" }
-  - { title: Verificar, desc: "trabalho e resultados", icon: "lucide:scan-search" }
-  - { title: Favorecer, desc: "software de qualidade", icon: "lucide:badge-check" }
+kicker: Subjetividade
+title: Avaliar a qualidade do software é um processo subjetivo.
 ---
 ---
 layout: default
-kicker: Exercício 1 · Conceitos
-title: Responda em uma frase
+title: Perguntas para controlar a qualidade
 ---
 
-<v-clicks>
-
-1. O que define qualidade de software?
-2. Como organização e projeto se diferenciam?
-3. Como garantia e controle se distinguem?
-4. Por que avaliar software é subjetivo?
-5. Como processos influenciam o produto?
-
-</v-clicks>
-
-<!-- Revele uma pergunta por vez e peça respostas curtas. -->
+- O software foi devidamente testado?
+- Todos os requisitos foram implementados?
+- A confiabilidade permite colocá-lo em uso?
 ---
-layout: panels
-kicker: Exercício 2 · Casos curtos
-title: Analise cada situação
-panels:
-  - { icon: "lucide:smartphone", title: Aplicativo, items: ["Funcional, mas lento: qualidade suficiente?"] }
-  - { icon: "lucide:mouse-pointer-click", title: Sistema, items: ["Confiável, mas difícil de usar: aprove?"] }
-  - { icon: "lucide:file-warning", title: Projeto, items: ["Sem padrões: qual risco permanece?"] }
+layout: default
+title: Perguntas para controlar a qualidade · 2
 ---
+
+- O desempenho é aceitável no uso normal?
+- O software é usável, estruturado e compreensível?
+- Padrões de programação e documentação foram seguidos?
 ---
-layout: steps
-kicker: Exercício 3 · Desafio em grupo
-title: Criem uma ficha de controle para um aplicativo
-steps:
-  - { title: Escolham, desc: "um aplicativo conhecido", icon: "lucide:smartphone" }
-  - { title: Perguntem, desc: "testes, requisitos e confiabilidade", icon: "lucide:circle-help" }
-  - { title: Avaliem, desc: "desempenho, usabilidade e estrutura", icon: "lucide:clipboard-check" }
-  - { title: Concluam, desc: "qualidade e justificativa", icon: "lucide:message-square-text" }
+layout: define
+term: Atributos de qualidade
+definition: Qualidade inclui atributos <span class="accent2">não funcionais</span> do sistema.
+points:
+  - Não considera somente funcionalidades
+  - "[IMAGEM: atributos da qualidade de software]"
 ---
 ---
 layout: default
-kicker: Síntese
-title: O que você deve lembrar desta aula
+title: Qualidade baseada em processos
 ---
 
-- Qualidade atende necessidades do cliente
-- Execução deve ser eficiente e confiável
-- Prazo e orçamento também importam
-- Organizações definem processos e padrões
-- Projetos verificam aplicação e planejam metas
-- Avaliar software envolve julgamento
-- Bons processos favorecem bons produtos
----
-layout: end
-title: Qualidade nasce de processos conscientes e perguntas bem feitas.
-subtitle: Continue perguntando o que significa “bom” neste contexto.
-contact: filipe.fernandes@ifsudestemg.edu.br
----
+- O processo influencia significativamente a qualidade
+- Bons processos favorecem software de boa qualidade
+
+<Callout icon="lucide:image">[IMAGEM: qualidade baseada em processos]</Callout>
