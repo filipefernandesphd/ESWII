@@ -18,7 +18,7 @@
 | Dia | Data | Módulo | Tópico |
 |---|---|---|---|
 | Quarta | 05/08/2026 | MD0: Apresentação da disciplina | [Apresentação da disciplina](aula-00/) |
-| Quinta | 06/08/2026 | MD1: Qualidade de Software | Introdução à qualidade de Software |
+| Quinta | 06/08/2026 | MD1: Qualidade de Software | [Introdução à qualidade de Software](aula-01/) |
 | Quarta | 12/08/2026 |  | Refatoração e code smells |
 | Quinta | 13/08/2026 |  | Refatoração e code smells |
 | Quarta | 19/08/2026 |  | Refatoração e code smells |
