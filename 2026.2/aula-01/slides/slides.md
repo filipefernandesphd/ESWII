@@ -69,13 +69,13 @@ title: Aspecto de projeto
 layout: default
 title: Equipe
 ---
-- Equipe capacitada:
-  - Conferir padrões e metas organizacionais
-  - Verificar tarefas registradas por cada equipe
-  - Detectar esquecimentos e suposições incorretas
-  - Gerenciar o processo de testes
+- Conferir padrões e metas organizacionais
+- Verificar tarefas registradas por cada equipe
+- Detectar esquecimentos e suposições incorretas
+- Gerenciar o processo de testes
 ---
 layout: define
+kicker: Equipe
 term: Quality Assurance (QA)
 points:
 - A equipe deve ser independente do desenvolvimento
@@ -110,7 +110,7 @@ title: Software não é um objeto concreto
 - Requisitos completos e inequívocos são difíceis
 - Especificações cobrem somente parte dos stakeholders
 - Algumas características são impossíveis de medir
-- Manutenibilidade é um exemplo
+  - Ex: manutenibilidade
 ---
 layout: statement
 kicker: Subjetividade
@@ -120,22 +120,21 @@ title: Avaliar a qualidade do software é um processo subjetivo?
 layout: default
 title: Perguntas para controlar a qualidade (1)
 ---
-- O software foi devidamente testado?
-- Todos os requisitos foram implementados?
-- A confiabilidade permite colocá-lo em uso?
-  - O que é _confiabilidade_?
+- O software foi devidamente **testado**?
+- Todos os **requisitos** foram implementados?
+- A **confiabilidade** permite colocá-lo em uso?
 ---
 layout: default
 title: Perguntas para controlar a qualidade (2)
 ---
-- O desempenho é aceitável no uso normal?
-- O software é usável, estruturado e compreensível?
-- Padrões de programação e documentação foram seguidos?
+- O **desempenho** é aceitável no uso normal?
+- O software é **usável**, **estruturado** e **compreensível**?
+- **Padrões de programação** e **documentação** foram seguidos?
 ---
 layout: default
 title: Atributos de Qualidade
 ---
-- Qualidade inclui atributos **não funcionais** do sistema.
+- Qualidade inclui atributos **não funcionais** do sistema
 ![Atributos de qualidade](./images/atributos_de_qualidade.png)
 ---
 layout: default
@@ -144,6 +143,13 @@ title: Qualidade baseada em processos
 - O processo influencia significativamente a qualidade
 - Bons processos favorecem software de boa qualidade
 ![Qualidade baseada em processos](./images/qualidade_baseada_em_processos.png)
+---
+layout: default
+title: Reflexão
+---
+- Qual app você considera de **qualidade** e outro **sem qualidade?**
+- Por quê? Quais atributos você considerou para cada um?
+- Tem ideia de como medi-los?
 ---
 layout: default
 title: Referências
