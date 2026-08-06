@@ -11,6 +11,7 @@ themeConfig:
   lang: pt-BR
 mdc: true
 routerMode: hash
+preloadImages: false
 biblio:
   filename: references.bib
   show_full_bib: true
