@@ -18,8 +18,13 @@ title: O que é qualidade?
 ---
 ---
 layout: statement
-kicker: Interação
-title: Pense por 30 segundos — o que mais irrita você em um aplicativo?
+kicker: Conceito central
+title: O que é qualidade de software?
+---
+---
+layout: bigtype
+kicker: Pense por 30 segundos
+title: O que mais irrita você em um aplicativo?
 ---
 ---
 layout: define
@@ -60,9 +65,9 @@ features:
   - { icon: "lucide:calendar-check", title: Entrega, desc: "Cumprir prazo e orçamento" }
 ---
 ---
-layout: statement
+layout: bigtype
 kicker: Resposta prática
-title: Gerencie a qualidade nos níveis organizacional e de projeto.
+title: Gerencie a qualidade na <em>organização</em> e no projeto.
 ---
 ---
 layout: vs
@@ -77,20 +82,18 @@ right:
   title: Projeto
   items:
     - Verifica processos e padrões
-    - Planeja objetivos e artefatos
+    - Planeja metas e artefatos
 label: complementa
 ---
 ---
-layout: reference
+layout: default
 kicker: Referência rápida
-title: O que os padrões organizacionais podem definir?
-items:
-  - { term: Processos, desc: "Como o trabalho acontece" }
-  - { term: Formulários, desc: "Como informações são registradas" }
-  - { term: Estilos e formatos, desc: "Como artefatos são apresentados" }
-  - { term: Procedimentos, desc: "Como tarefas são conduzidas" }
-  - { term: Documentação, desc: "Como decisões ficam registradas" }
+title: Padrões organizacionais podem cobrir
 ---
+
+<Tags :items="['Processos', 'Formulários', 'Estilos e formatos', 'Procedimentos', 'Documentação']" />
+
+<!-- Relacione cada item aos artefatos já usados pelos estudantes. -->
 ---
 layout: vs
 kicker: "[Comparação] Referência da manufatura"
@@ -99,7 +102,7 @@ left:
   title: Garantia da qualidade
   items:
     - Define processos e padrões
-    - Introduz práticas na produção
+    - Introduz práticas na fabricação
 right:
   title: Controle da qualidade
   items:
@@ -109,19 +112,23 @@ label: e
 ---
 ---
 layout: steps
-kicker: "[Fluxo sugerido: práticas da indústria]"
+kicker: "[Fluxograma sugerido: práticas da indústria]"
 title: No software, a gestão combina quatro frentes
 steps:
   - { title: Definir, desc: "procedimentos, processos e padrões", icon: "lucide:list-checks" }
   - { title: Configurar, desc: "gerenciar configurações", icon: "lucide:settings" }
-  - { title: Verificar, desc: "executar atividades de verificação", icon: "lucide:search-check" }
-  - { title: Validar, desc: "executar atividades de validação", icon: "lucide:badge-check" }
+  - { title: Verificar, desc: "realizar atividades de verificação", icon: "lucide:search-check" }
+  - { title: Validar, desc: "realizar atividades de validação", icon: "lucide:badge-check" }
 ---
 ---
-layout: statement
+layout: default
 kicker: "[Linha do tempo sugerida: ciclo do software]"
-title: A gestão da qualidade continua depois da entrega.
+title: A gestão continua depois da entrega
 ---
+
+<Callout icon="lucide:repeat-2">Qualidade é gerenciada durante e após a entrega.</Callout>
+
+<!-- Destaque que a responsabilidade não termina com o lançamento. -->
 ---
 layout: statement
 kicker: Objetividade
@@ -173,13 +180,13 @@ subtitle: Nem toda qualidade cabe em uma medida direta.
 ---
 ---
 layout: statement
-kicker: "[Visual sugerido: régua]"
-title: Quais atributos permitem verificar a qualidade de uma régua?
+kicker: "[Imagem sugerida: régua]"
+title: Quais atributos verificam a qualidade de uma régua?
 ---
 ---
 layout: statement
-kicker: "[Visual sugerido: pintura]"
-title: Quais atributos permitem verificar a qualidade de uma obra de arte?
+kicker: "[Imagem sugerida: pintura]"
+title: Quais atributos verificam uma obra de arte?
 ---
 ---
 layout: vs
@@ -203,13 +210,13 @@ kicker: Por que isso acontece?
 title: Software não se compara diretamente a objetos concretos
 panels:
   - { icon: "lucide:file-question", title: Requisitos, items: ["Podem ser incompletos ou ambíguos"] }
-  - { icon: "lucide:users-round", title: Interesses, items: ["Especificações cobrem poucos envolvidos"] }
+  - { icon: "lucide:users-round", title: Interesses, items: ["Especificações cobrem parte dos envolvidos"] }
   - { icon: "lucide:ruler", title: Medição, items: ["Certas propriedades resistem à medida"] }
 ---
 ---
 layout: statement
 kicker: Discussão rápida
-title: Se mantenibilidade é difícil de medir, como avaliá-la?
+title: Se manutenibilidade é difícil de medir, como avaliá-la?
 ---
 ---
 layout: section
@@ -220,7 +227,7 @@ subtitle: A equipe transforma expectativas em critérios de análise.
 ---
 ---
 layout: feature
-kicker: "[Mapa sugerido: atributos]"
+kicker: "[Infográfico sugerido: atributos]"
 title: Funcionalidade não encerra a avaliação
 columns: 4
 features:
@@ -258,7 +265,7 @@ label: e
 ---
 ---
 layout: steps
-kicker: "[Fluxo sugerido: processo → produto]"
+kicker: "[Fluxograma sugerido: processo → produto]"
 title: Bons processos favorecem bons produtos
 steps:
   - { title: Definir, desc: "processos adequados", icon: "lucide:route" }
@@ -272,20 +279,26 @@ kicker: Exercício 1 · Conceitos
 title: Responda em uma frase
 ---
 
+<v-clicks>
+
 1. O que define qualidade de software?
 2. Como organização e projeto se diferenciam?
 3. Como garantia e controle se distinguem?
 4. Por que avaliar software é subjetivo?
 5. Como processos influenciam o produto?
+
+</v-clicks>
+
+<!-- Revele uma pergunta por vez e peça respostas curtas. -->
 ---
-layout: default
+layout: panels
 kicker: Exercício 2 · Casos curtos
 title: Analise cada situação
+panels:
+  - { icon: "lucide:smartphone", title: Aplicativo, items: ["Funcional, mas lento: qualidade suficiente?"] }
+  - { icon: "lucide:mouse-pointer-click", title: Sistema, items: ["Confiável, mas difícil de usar: aprove?"] }
+  - { icon: "lucide:file-warning", title: Projeto, items: ["Sem padrões: qual risco permanece?"] }
 ---
-
-1. Aplicativo funcional, mas lento: qualidade suficiente?
-2. Sistema confiável, porém difícil de usar: aprove?
-3. Projeto sem padrões: qual risco permanece?
 ---
 layout: steps
 kicker: Exercício 3 · Desafio em grupo
