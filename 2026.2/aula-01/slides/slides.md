@@ -12,139 +12,84 @@ routerMode: hash
 layout: academic-cover
 ---
 ---
+layout: section
+title: Introdução
+index: "01"
+---
+---
 layout: bigtype
-kicker: Introdução
 title: O que é <em>qualidade</em>?
 ---
 ---
-layout: statement
-kicker: Introdução
-title: O que é qualidade de software?
+layout: bigtype
+title: O que é qualidade de <em>software</em>?
+---
+---
+layout: quote
+title: Definição
+quote: Garantir que o software atenda às <b>necessidades dos clientes</b>, seja executado de modo eficiente e confiável e seja entregue no <b>prazo e dentro do orçamento</b>
+author: [@SOMMERVILE2018]
 ---
 ---
 layout: define
-term: Qualidade de software
-definition: Atender às <span class="accent2">necessidades dos clientes</span>.
+term: Como garantir que o software ...
 points:
-  - Executar com eficiência e confiabilidade
-  - Entregar no prazo
-  - Permanecer dentro do orçamento
+- Atenda às necessidades dos clientes?
+- Seja executado de modo eficiente e confiável?
+- Seja entregue no prazo e dentro do orçamento?
 ---
 ---
-layout: reference
-title: Como garantir qualidade?
-items:
-  - { term: Cliente, desc: "Atender às necessidades" }
-  - { term: Execução, desc: "Eficiência e confiabilidade" }
-  - { term: Entrega, desc: "Prazo e orçamento" }
-  - { term: Gestão, desc: "Organização e projeto" }
+layout: define
+term: "Resposta:"
+points:
+- Gerenciar a qualidade do software em aspecto <span class="accent2">organizacional</span> e de <span class="accent2">projeto</span>
 ---
 ---
 layout: default
+kicker: Gerenciamento da Qualidade
 title: Aspecto organizacional
 ---
-
 - Definir processos de desenvolvimento
 - Padronizar formulários, estilos e formatos
 - Definir procedimentos e documentação
 ---
 layout: default
+kicker: Gerenciamento da Qualidade
 title: Aspecto de projeto
 ---
-
 - Verificar a aplicação de processos e padrões
 - Definir planos, metas e artefatos de qualidade
 ---
-layout: define
-term: Garantia da qualidade
-definition: Define <span class="accent2">processos e padrões</span> na manufatura.
-points:
-  - Busca produtos de alta qualidade
-  - Introduz processos na fabricação
----
----
-layout: define
-term: Controle da qualidade
-definition: Aplica os <span class="accent2">processos de qualidade</span>.
-points:
-  - Elimina produtos abaixo do nível exigido
----
----
 layout: default
-title: Indústrias de software
+title: Equipe
 ---
-
-- Definir procedimentos, processos e padrões
-- Gerenciar configurações
-- Realizar verificação
-- Realizar validação
----
-layout: bigtype
-kicker: Gerenciamento da qualidade
-title: Acontece <em>durante</em> e após a entrega.
----
----
-layout: default
-title: Gerenciamento e desenvolvimento
----
-
-<Callout icon="lucide:image">[IMAGEM: gerenciamento da qualidade e desenvolvimento de software]</Callout>
----
-layout: reference
-title: Equipe — resultados e documentação
-items:
-  - { term: Resultados, desc: "Conferir padrões e metas organizacionais" }
-  - { term: Documentação, desc: "Verificar tarefas registradas por cada equipe" }
----
----
-layout: reference
-title: Equipe — continuidade e lançamento
-items:
-  - { term: Continuidade, desc: "Detectar esquecimentos e suposições incorretas" }
-  - { term: Lançamento, desc: "Gerenciar o processo de testes" }
----
----
-layout: bigtype
-kicker: QA · Quality Assurance
-title: A equipe deve ser independente do desenvolvimento.
-subtitle: Assim, mantém uma visão objetiva da qualidade.
----
+- Equipe capacitada:
+  - Conferir padrões e metas organizacionais
+  - Verificar tarefas registradas por cada equipe
+  - Detectar esquecimentos e suposições incorretas
+  - Gerenciar o processo de testes
 ---
 layout: define
-term: Plano de qualidade
-definition: Define as <span class="accent2">qualidades desejadas</span> do software.
+term: Quality Assurance (QA)
 points:
-  - Descreve como serão avaliadas
+- A equipe deve ser independente do desenvolvimento
+- Assim, mantém uma visão objetiva da qualidade
 ---
 ---
-layout: reference
-kicker: Planejamento da qualidade
-title: Produto
-items:
-  - { term: Introdução, desc: "Descrição, mercado e expectativas de qualidade" }
-  - { term: Planos, desc: "Datas, responsabilidades, distribuição e manutenção" }
----
----
-layout: reference
-kicker: Planejamento da qualidade
-title: Processos, metas e riscos
-items:
-  - { term: Processos, desc: "Desenvolvimento, serviço e padrões" }
-  - { term: Metas, desc: "Planos, atributos críticos e justificativas" }
-  - { term: Riscos, desc: "Principais riscos e ações de resposta" }
+layout: section
+title: Qualidade de Software
+index: "02"
 ---
 ---
 layout: default
 title: Quais atributos verificam a qualidade de uma régua?
 ---
-
-<Callout icon="lucide:image">[IMAGEM: régua]</Callout>
+![Régua](./images/régua.png)
 ---
 layout: default
 title: Quais atributos verificam se uma pintura é arte?
 ---
-
-<Callout icon="lucide:image">[IMAGEM: monalisa]</Callout>
+![Monsalisa](./images/monalisa.png)
 ---
 layout: vs
 title: A natureza do produto muda a avaliação
@@ -156,7 +101,6 @@ label: enquanto
 layout: default
 title: Software não é um objeto concreto
 ---
-
 - Requisitos completos e inequívocos são difíceis
 - Especificações cobrem somente parte dos stakeholders
 - Algumas características são impossíveis de medir
@@ -164,38 +108,50 @@ title: Software não é um objeto concreto
 ---
 layout: statement
 kicker: Subjetividade
-title: Avaliar a qualidade do software é um processo subjetivo.
+title: Avaliar a qualidade do software é um processo subjetivo?
 ---
 ---
 layout: default
-title: Perguntas para controlar a qualidade
+title: Perguntas para controlar a qualidade (1)
 ---
-
 - O software foi devidamente testado?
 - Todos os requisitos foram implementados?
 - A confiabilidade permite colocá-lo em uso?
+  - O que é _confiabilidade_?
 ---
 layout: default
-title: Perguntas para controlar a qualidade · 2
+title: Perguntas para controlar a qualidade (2)
 ---
-
 - O desempenho é aceitável no uso normal?
 - O software é usável, estruturado e compreensível?
 - Padrões de programação e documentação foram seguidos?
 ---
-layout: define
-term: Atributos de qualidade
-definition: Qualidade inclui atributos <span class="accent2">não funcionais</span> do sistema.
-points:
-  - Não considera somente funcionalidades
-  - "[IMAGEM: atributos da qualidade de software]"
+layout: default
+title: Atributos de Qualidade
 ---
+- Qualidade inclui atributos **não funcionais** do sistema.
+![Atributos de qualidade](./images/atributos_de_qualidade.png)
 ---
 layout: default
 title: Qualidade baseada em processos
 ---
-
 - O processo influencia significativamente a qualidade
 - Bons processos favorecem software de boa qualidade
-
-<Callout icon="lucide:image">[IMAGEM: qualidade baseada em processos]</Callout>
+![Qualidade baseada em processos](./images/qualidade_baseada_em_processos.png)
+---
+layout: feature
+kicker: Encerramento
+title: Obrigado!
+columns: 2
+features:
+- { icon: "lucide:globe", desc: filipefernandesphd.com }
+- { icon: "lucide:instagram", desc: "@filipfernandesphd" }
+---
+---
+layout: two-cols
+title: Avaliação da Experiência de Aprendizagem
+---
+- **[Seu feedback é muito importante!](https://forms.gle/CMfL5oTm235FfuH59)**
+- Obtenha o código da avaliação
+::right::
+<img src="../../assets/qrcode-avaliacao.png" width="300px"/>
