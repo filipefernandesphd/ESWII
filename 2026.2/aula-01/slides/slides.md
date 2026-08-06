@@ -1,5 +1,7 @@
 ---
 theme: slidev-theme-tahta
+addons:
+  - slidev-addon-citations
 title: Introdução à Qualidade de Software
 aspectRatio: 16/9
 info: |
@@ -9,6 +11,10 @@ themeConfig:
   lang: pt-BR
 mdc: true
 routerMode: hash
+biblio:
+  filename: references.bib
+  show_full_bib: true
+  show_id: false
 layout: academic-cover
 ---
 ---
@@ -25,11 +31,10 @@ layout: bigtype
 title: O que é qualidade de <em>software</em>?
 ---
 ---
-layout: quote
+layout: default
 title: Definição
-quote: Garantir que o software atenda às <b>necessidades dos clientes</b>, seja executado de modo eficiente e confiável e seja entregue no <b>prazo e dentro do orçamento</b>
-author: [@SOMMERVILE2018]
 ---
+> Garantir que o software atenda às **necessidades dos clientes**, seja executado de modo eficiente e confiável e seja entregue no **prazo e dentro do orçamento** [@SOMMERVILE2018]
 ---
 layout: define
 term: Como garantir que o software ...
@@ -138,6 +143,11 @@ title: Qualidade baseada em processos
 - O processo influencia significativamente a qualidade
 - Bons processos favorecem software de boa qualidade
 ![Qualidade baseada em processos](./images/qualidade_baseada_em_processos.png)
+---
+layout: default
+title: Referências
+---
+<BiblioList />
 ---
 layout: feature
 kicker: Encerramento
