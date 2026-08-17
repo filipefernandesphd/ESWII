@@ -13,6 +13,15 @@ layout: academic-cover
 ---
 
 ---
+layout: image
+image: "../../assets/livro-engsoftmoderna.png"
+kicker: Livro Texto
+title: Engenharia de Software Moderna
+---
+[Marco Tulio Valente. Engenharia de Software Moderna: Princípios e Práticas para Desenvolvimento de Software com Produtividade, Editora: Independente, 2020.](https://engsoftmoderna.info/)
+
+
+---
 layout: section
 index: "01"
 kicker: (T)eoria
