@@ -19,11 +19,12 @@
 |---|---|---|---|
 | Quarta | 05/08/2026 | MD0: Apresentação da disciplina | [Apresentação da disciplina](aula-00/) |
 | Quinta | 06/08/2026 | MD1: Qualidade de Software | [Introdução à qualidade de Software](aula-01/) |
-| Quarta | 12/08/2026 |  | [Refatoração e code smells](aula-02/) |
-| Quinta | 13/08/2026 |  | [Refatoração e code smells](aula-02/) |
-| Quarta | 19/08/2026 |  | [Refatoração e code smells](aula-03/) |
+| Quarta | 12/08/2026 |  | [AULA CANCELADA] |
+| Quinta | 13/08/2026 |  | [AULA CANCELADA] |
+| Quarta | 19/08/2026 |  | [Refatoração](aula-02/) |
+| Quarta | 19/08/2026 |  | [Code Smells](aula-03/) |
 | Quinta | 20/08/2026 |  | [Princípios SOLID](aula-04/) |
-| Quarta | 26/08/2026 |  | [Princípios SOLID](aula-04/) |
+| Quarta | 26/08/2026 |  | Princípios SOLID |
 | Quinta | 27/08/2026 |  | Modelos de maturidade: CMMI e MPS.BR |
 | Quarta | 02/09/2026 |  | Hands-on |
 | Quinta | 03/09/2026 |  | AVALIAÇÃO 1 |
@@ -54,6 +55,7 @@
 | Quarta | 18/11/2026 |  | [REPOSIÇÃO - 5 AULAS] |
 | Quinta | 19/11/2026 | MD4: Projeto Final | Desenvolvimento do projeto final |
 | Quarta | 25/11/2026 |  | Desenvolvimento do projeto final |
+| Quarta | 11/11/2026 |  | [REPOSIÇÃO - 4 AULAS] |
 | Quinta | 26/11/2026 |  | Desenvolvimento do projeto final |
 | Quarta | 02/12/2026 |  | Desenvolvimento do projeto final |
 | Quinta | 03/12/2026 |  | Entrega do relatório |

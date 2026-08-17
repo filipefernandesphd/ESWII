@@ -24,21 +24,28 @@
       "day": "Quarta",
       "date": "12/08/2026",
       "module": "",
-      "topic": "Refatoração e code smells",
-      "id": "aula-02"
+      "topic": "[AULA CANCELADA]",
+      "id": ""
     },
     {
       "day": "Quinta",
       "date": "13/08/2026",
       "module": "",
-      "topic": "Refatoração e code smells",
+      "topic": "[AULA CANCELADA]",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "19/08/2026",
+      "module": "",
+      "topic": "Refatoração",
       "id": "aula-02"
     },
     {
       "day": "Quarta",
       "date": "19/08/2026",
       "module": "",
-      "topic": "Refatoração e code smells",
+      "topic": "Code Smells",
       "id": "aula-03"
     },
     {
@@ -53,7 +60,7 @@
       "date": "26/08/2026",
       "module": "",
       "topic": "Princípios SOLID",
-      "id": "aula-04"
+      "id": ""
     },
     {
       "day": "Quinta",
@@ -263,6 +270,13 @@
       "date": "25/11/2026",
       "module": "",
       "topic": "Desenvolvimento do projeto final",
+      "id": ""
+    },
+    {
+      "day": "Quarta",
+      "date": "11/11/2026",
+      "module": "",
+      "topic": "[REPOSIÇÃO - 4 AULAS]",
       "id": ""
     },
     {
