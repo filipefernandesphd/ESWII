@@ -19,9 +19,9 @@
 |---|---|---|---|
 | Quarta | 05/08/2026 | MD0: Apresentação da disciplina | [Apresentação da disciplina](aula-00/) |
 | Quinta | 06/08/2026 | MD1: Qualidade de Software | [Introdução à qualidade de Software](aula-01/) |
-| Quarta | 12/08/2026 |  | Refatoração e code smells |
-| Quinta | 13/08/2026 |  | Refatoração e code smells |
-| Quarta | 19/08/2026 |  | Refatoração e code smells |
+| Quarta | 12/08/2026 |  | [Refatoração e code smells](aula-02/) |
+| Quinta | 13/08/2026 |  | [Refatoração e code smells](aula-02/) |
+| Quarta | 19/08/2026 |  | [Refatoração e code smells](aula-02/) |
 | Quinta | 20/08/2026 |  | Princípios SOLID |
 | Quarta | 26/08/2026 |  | Princípios SOLID |
 | Quinta | 27/08/2026 |  | Modelos de maturidade: CMMI e MPS.BR |
