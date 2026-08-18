@@ -181,6 +181,8 @@ dist
 
 
 AGENTS.md
-INTRUCTIONS.md
+INSTRUCTIONS.md
 prompts/
+.prompts/
 skills/
+.skills/
