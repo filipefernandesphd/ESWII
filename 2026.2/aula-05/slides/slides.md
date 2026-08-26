@@ -3,7 +3,7 @@ theme: slidev-theme-tahta
 title: Modelos de Maturidade
 aspectRatio: 16/10
 info: |
-  Modelos de Maturidade: MPS.BR e CMMI
+  Modelos de Maturidade
 themeConfig:
   variant: minimal
 addons:
@@ -20,372 +20,328 @@ layout: academic-cover
 
 ---
 layout: default
-kicker: Situação-problema
-title: A SoftSolutions cresceu, mas seus processos não acompanharam
+title: Cenário — SoftSolutions
 ---
 
-- Empresa de médio porte, há 10 anos no mercado
-- Projetos sob demanda para órgãos públicos e pequenas empresas
-- Contratos recentes foram perdidos por **atrasos e falhas de qualidade**
-
-<div class="mt-10 border-l-6 border-[var(--accent)] pl-6 text-3xl font-semibold">
-O problema não está apenas no código: está na forma de trabalhar.
-</div>
-
----
-layout: two-cols
-kicker: Diagnóstico
-title: Sintomas recorrentes produzem impactos previsíveis
----
-
-### No processo
-
-- Prazos não cumpridos
-- Requisitos pouco documentados
-- Desenvolvimento e testes sem padrão
-- Retrabalho e erros em produção
-- Decisões sem métricas
-
-::right::
-
-### No negócio
-
-- Clientes insatisfeitos
-- Equipe desmotivada
-- Margem consumida por correções
-- Perda de contratos
-- Menor competitividade
+- Empresa de médio porte que desenvolve sistemas sob demanda;
+- 10 anos de mercado, atende principalmente órgãos públicos e pequenas empresas;
+- Recentemente perdeu contratos importantes por problemas de qualidade e atrasos.
 
 ---
 layout: default
-kicker: Questão norteadora
-title: Como sair do improviso sem tentar mudar tudo de uma vez?
+title: Principais Problemas
 ---
 
-<div class="h-[72%] flex items-center justify-center text-center">
-  <p class="max-w-[25ch] text-5xl leading-tight font-bold text-[var(--academic-navy-950)]">
-    Como estruturar processos para reduzir atrasos, evitar retrabalho e sustentar a melhoria?
+- Prazos de entrega frequentemente não cumpridos;
+- Requisitos pouco documentados e mudanças constantes;
+- Falta de padronização no desenvolvimento e testes;
+- Retrabalho elevado e erros em produção;
+- Ausência de métricas para monitorar desempenho.
+
+---
+layout: default
+title: Impactos para a SoftSolutions
+---
+
+- Perda de contratos importantes;
+- Desmotivação da equipe de desenvolvimento;
+- Clientes insatisfeitos;
+- Redução da competitividade no mercado.
+
+---
+layout: default
+title: Reflexão
+---
+
+<div class="h-[70%] flex items-center justify-center text-center">
+  <p class="max-w-[28ch] text-5xl leading-tight font-bold text-[var(--academic-navy-950)]">
+    Como a SoftSolutions pode estruturar seus processos para reduzir atrasos, evitar retrabalho e aumentar a competitividade?
   </p>
 </div>
 
 ---
 layout: default
-kicker: Ideia central
-title: Maturidade torna a melhoria progressiva e verificável
+title: Solução
 ---
 
-Um modelo de maturidade oferece uma **referência evolutiva** para organizar práticas, avaliar a situação atual e definir o próximo patamar.
-
-<div class="mt-12 grid grid-cols-3 gap-8 text-center">
-  <div><div class="text-5xl font-bold text-[var(--accent-deep)]">1</div><div class="mt-3 text-2xl">Diagnosticar</div></div>
-  <div><div class="text-5xl font-bold text-[var(--accent-deep)]">2</div><div class="mt-3 text-2xl">Priorizar</div></div>
-  <div><div class="text-5xl font-bold text-[var(--accent-deep)]">3</div><div class="mt-3 text-2xl">Institucionalizar</div></div>
-</div>
-
----
-layout: default
-kicker: Limite importante
-title: O modelo define o que alcançar — não uma receita única
----
-
-- Especifica **objetivos, práticas ou resultados esperados**
-- Permite avaliar se o processo é executado de modo consistente
-- Não prescreve todas as atividades, ferramentas ou papéis
-- A organização escolhe **como** atender ao modelo em seu contexto
-
-<div class="mt-10 border-l-6 border-[var(--accent)] pl-6 text-3xl font-semibold">
-Conformidade sem adequação ao contexto gera burocracia, não maturidade.
+<div class="h-[70%] flex items-center justify-center text-center">
+  <p class="max-w-[31ch] text-5xl leading-tight font-bold text-[var(--academic-navy-950)]">
+    Adotar <strong>práticas organizadas</strong> de trabalho que ajudam a melhorar seus processos de forma gradual e alinhada a padrões de qualidade reconhecidos.
+  </p>
 </div>
 
 ---
 layout: two-cols
-kicker: Duas referências
-title: MPS.BR e CMMI orientam a evolução dos processos
+title: Modelos de Maturidade
 ---
 
-<div class="h-[65%] flex flex-col items-center justify-center">
-  <img src="../../assets/maturidade/logo-mpsbr.png" alt="Logotipo do programa MPS.BR" class="max-h-[38%] max-w-[76%] object-contain" />
-  <p class="mt-8 text-center text-2xl">Modelo brasileiro com atenção especial às micro, pequenas e médias empresas.</p>
+<div class="h-[70%] flex items-center justify-center">
+  <img
+    src="../../assets/maturidade/logo-mpsbr.png"
+    alt="Logotipo do MPS.BR"
+    class="max-h-[52%] max-w-[76%] object-contain"
+  />
 </div>
 
 ::right::
 
-<div class="h-[65%] flex flex-col items-center justify-center">
-  <img src="../../assets/maturidade/cmmi.jpg" alt="Logotipo do CMMI" class="max-h-[42%] max-w-[78%] object-contain" />
-  <p class="mt-8 text-center text-2xl">Referência internacional de práticas para melhorar desempenho e capacidade.</p>
+<div class="h-[70%] flex items-center justify-center">
+  <img
+    src="../../assets/maturidade/cmmi.jpg"
+    alt="Logotipo do CMMI"
+    class="max-h-[52%] max-w-[76%] object-contain"
+  />
 </div>
 
 ---
-layout: section
-index: "01"
-kicker: Referência brasileira
-title: MPS.BR
+layout: default
+title: MPSBR
 ---
+
+- **MPSBR — Melhoria de Processo do Software Brasileiro** [@softex2024]
+- Criado em dezembro de 2003 e coordenado pela Associação para Promoção da Excelência do Software Brasileiro (SOFTEX).
+- O MPSBR é um programa mobilizador, cujo objetivo é apoiar o aumento da competitividade das organizações por meio da **melhoria de seus processos**.
 
 ---
 layout: default
-kicker: Programa MPS.BR
-title: Melhorar processos é o meio; aumentar competitividade é o objetivo
+title: Metas
 ---
 
-- Criado em 2003 e coordenado pela **Softex**
-- Adequado a organizações de diferentes portes e características
-- Atenção especial às **micro, pequenas e médias empresas**
-- Compatível com referências de qualidade aceitas internacionalmente
-
-O programa articula evolução técnica, formação de profissionais, avaliação e disseminação dos modelos [@softex2024].
-
----
-layout: two-cols
-kicker: Arquitetura do programa
-title: Cinco componentes cobrem referência, avaliação e adoção
----
-
-### Modelos de referência
-
-- **MR-MPS-SW** — processos de software
-- **MR-MPS-SV** — processos de serviços
-- **MR-MPS-RH** — gestão de pessoas
-
-::right::
-
-### Viabilização
-
-- **MA-MPS** — método de avaliação e evidências
-- **MN-MPS** — regras de negócio para adoção
+# Metas Técnicas
+# Metas de Negócio
 
 ---
 layout: default
-kicker: Base técnica
-title: O MPS combina normas e modelos reconhecidos
+kicker: Metas
+title: Metas Técnicas
 ---
 
-<div class="h-[72%] flex items-center justify-center">
-  <img src="../../assets/maturidade/base-tecnica-mpsbr.png" alt="Bases técnicas e componentes do modelo MPS" class="max-h-full max-w-[94%] object-contain" />
+Visando ao aprimoramento do programa:
+
+- Atualização dos modelos e guias *(representantes de universidades, instituições governamentais, centros de pesquisa e organizações privadas)*;
+- Formação de consultores, instrutores de cursos, avaliadores e Instituições Implementadoras/Avaliadoras.
+
+---
+layout: default
+kicker: Metas
+title: Metas de Negócio
+---
+
+Visando à disseminação e viabilização na adoção dos Modelos de Maturidade:
+
+- Criação e aprimoramento do modelo de negócio MN-MPS;
+- Realização de cursos, provas e workshops MPS *(ex.: WAMPS e Softwex Experience)*;
+- Transparência para as organizações que realizaram a avaliação MPS.
+
+---
+layout: default
+title: Objetivos
+---
+
+- **Adequados ao perfil de empresas**, com especial atenção às **micro, pequenas e médias empresas** (mPME)
+
+- **Compatíveis com os padrões de qualidade aceitos internacionalmente**.
+
+---
+layout: default
+title: Base Técnica
+---
+
+<div class="h-[100%] flex items-center justify-center">
+  <img
+    src="../../assets/maturidade/base-tecnica-mpsbr.png"
+    alt="Base técnica do modelo MPS"
+    class="max-h-full max-w-[92%] object-contain"
+  />
 </div>
 
-[@softex2024]
+---
+layout: default
+title: Componentes
+---
+
+- Cada componente é descrito por meio de guias e/ou documentos do Programa MPS.BR.
+
+---
+title: Componentes
+---
+
+- O Programa MPSBR possui 5 componentes:
+  - **MR-MPS-SW: Modelo de Referência MPS para Software**
+  - MR-MPS-SV: Modelo de Referência MPS para Serviços
+  - MR-MPS-RH: Modelo de Referência MPS para Gestão de Pessoas
+  - MA-MPS: Método de Avaliação
+  - MN-MPS: Modelo de Negócio
+
+---
+layout: default
+---
+
+<div class="h-[100%] flex items-center justify-center">
+  <img
+    src="../../assets/maturidade/niveis-mpsbr.png"
+    alt="Visão geral dos níveis de maturidade do MPS.BR para software"
+    class="max-h-full max-w-[92%] object-contain"
+  />
+</div>
+
+---
+layout: default
+title: MR-MPS-SW
+---
+
+- MR-MPS-SW define **níveis de maturidade** que são uma combinação entre **23 processos** e sua **capacidade**;
 
 ---
 layout: default
 kicker: MR-MPS-SW
-title: O nível resulta da combinação entre processos e capacidade
+title: Processos
 ---
 
-<div class="mt-12 flex items-center justify-center gap-10 text-center">
-  <div class="w-[30%] border-b-6 border-[var(--accent)] pb-5">
-    <div class="text-5xl font-bold">Processos</div>
-    <div class="mt-3 text-2xl">propósitos e resultados esperados</div>
-  </div>
-  <div class="text-6xl font-bold text-[var(--accent-deep)]">+</div>
-  <div class="w-[30%] border-b-6 border-[var(--accent)] pb-5">
-    <div class="text-5xl font-bold">Capacidade</div>
-    <div class="mt-3 text-2xl">grau de execução e institucionalização</div>
-  </div>
-</div>
-
-<p class="mt-14 text-center text-3xl font-semibold">A combinação caracteriza o nível de maturidade alcançado.</p>
-
----
-layout: vs
-kicker: Tipos de processo
-title: Projetos entregam valor; processos organizacionais sustentam a entrega
-left:
-  title: Processos de projeto
-  items: [Planejar e acompanhar projetos, Definir e gerenciar requisitos, Projetar e construir o produto, Integrar componentes, Verificar e validar]
-right:
-  title: Processos organizacionais
-  items: [Gerir configuração e aquisições, Medir desempenho, Apoiar decisões, Desenvolver competências, Gerir e melhorar processos]
-label: +
----
+- Os processos estão divididos em dois conjuntos:
+  - **Processos de projeto:** executados para os projetos de software;
+  - **Processos organizacionais:** executados para atendar às expectativas e necessidades das partes interessadas.
 
 ---
 layout: default
-kicker: Evolução acumulativa
-title: Cada nível preserva resultados anteriores e acrescenta capacidade
+kicker: MR-MPS-SW
+title: Resultados Esperados
 ---
 
-<div class="h-[74%] flex items-center justify-center">
-  <img src="../../assets/maturidade/niveis-mpsbr.png" alt="Pirâmide dos sete níveis de maturidade do MPS.BR para software" class="max-h-full max-w-[88%] object-contain" />
-</div>
-
----
-layout: default
-kicker: Sete níveis
-title: Os níveis G a D estabilizam e padronizam o trabalho
----
-
-- **G — Parcialmente gerenciado:** projetos e requisitos começam a ser gerenciados
-- **F — Gerenciado:** apoios organizacionais passam a sustentar os projetos
-- **E — Parcialmente definido:** processos organizacionais e competências ganham forma
-- **D — Largamente definido:** a engenharia do produto é ampliada e padronizada
+- Cada processo possui um propósito e **resultados esperados** de sua execução;
+- **Os resultados são acumulativos**, ou seja, os resultados que aparecem no nível G deverão estar presentes, com as mesmas características ou com evoluções, no nível F e acima.
 
 ---
 layout: default
-kicker: Sete níveis
-title: Os níveis C a A ampliam controle, previsão e melhoria
+title: Atenção!
 ---
 
-- **C — Definido:** o conjunto de processos está institucionalizado
-- **B — Gerenciado quantitativamente:** métricas apoiam previsibilidade e controle
-- **A — Em otimização:** a melhoria contínua orienta a evolução
-
-<div class="mt-12 border-l-6 border-[var(--accent)] pl-6 text-3xl font-semibold">
-Cada nível preserva os resultados dos níveis anteriores.
-</div>
+- As *atividades e tarefas* necessárias para atender ao propósito e aos *resultados esperados* **NÃO** são definidas no guia;
+- Fica a cargo dos usuários do MR-MPS-SW definir como atender aos resultados esperados;
 
 ---
 layout: default
-kicker: Exemplo de entrada
-title: No nível G, gerenciar já significa produzir evidências
 ---
-
-### A execução do processo é gerenciada
-
-- O processo produz os resultados definidos
-- A execução é **planejada e monitorada**
-- As pessoas estão preparadas para suas responsabilidades
-
-<div class="mt-10 grid grid-cols-3 gap-8 text-center">
-  <div><strong>GPR</strong><br><span class="text-2xl">Gerência de Projetos</span></div>
-  <div><strong>REQ</strong><br><span class="text-2xl">Engenharia de Requisitos</span></div>
-  <div><strong>CAP</strong><br><span class="text-2xl">Capacitação</span></div>
-</div>
+# MR-MPS-SW define <em>o que</em> deve ser implementado e <em>não como</em> implementar.
 
 ---
 layout: default
-kicker: Evidências
-title: Maturidade aparece no trabalho cotidiano, não no discurso
+title: Resumo da Estrutura
 ---
 
-Para a SoftSolutions, sinais concretos de avanço incluiriam:
-
-- Planos atualizados e acompanhados
-- Requisitos rastreáveis e mudanças controladas
-- Responsabilidades explícitas e pessoas capacitadas
-- Produtos de trabalho versionados
-- Medidas usadas para decidir e corrigir desvios
+- **Nível de Maturidade**
+  - **Capacidade do Processo**
+    - **Resultados**
+    - **Processos (de Projeto e Organizacionais)**
+      - **Propósito**
+      - **Resultados Esperados**
 
 ---
 layout: section
-index: "02"
-kicker: Referência internacional
-title: CMMI
+index: "Exemplo"
+title: Nível de Maturidade G
+---
+
+---
+kicker: Exemplo - Nível de Maturidade G
+title: Capacidade do Processo
+---
+A execução do processo é gerenciada (CP-G)
+
+---
+kicker: Exemplo - Nível de Maturidade G
+title: Resultados
+---
+- O processo produz os resultados definidos;
+- A execução do processo é planejada e monitorada;
+- As pessoas estão preparadas para executar suas responsabilidades no processo.
+
+---
+kicker: Exemplo - Nível de Maturidade G
+title: Processos
+---
+- Gerência de Projetos (GPR)
+- Engenharia de Requisitos (REQ)
+- Capacitação (CAP)
+
+---
+kicker: Exemplo - Nível de Maturidade G
+title: Processo -> Gerência de Projetos (GPR)
+---
+- **Propósito:** estabelecer e manter atualizados planos que definam as atividades do processo, bem como prover informações sobre o andamento do projeto.
+- **Resultados Esperados:** 23
+
+---
+kicker: Exemplo - Nível de Maturidade G
+title: Processo -> Engenharia de Requisitos (REQ)
+---
+- **Propósito:** definir, gerenciar e manter atualizados os requisitos das partes interessadas e do produto.
+- **Resultados Esperados:** 7
+
+---
+kicker: Exemplo - Nível de Maturidade G
+title: Processo -> Capacitação (CAP)
+---
+- **Propósito:** prover a organização com recursos humanos com as competências adequadas às necessidades do negócio.
+- **Resultados Esperados:** 4
+
+---
+layout: section
+index: "CMMI"
+title: Capability Maturity Model Integration
 ---
 
 ---
 layout: default
-kicker: Visão geral
-title: O CMMI conecta melhoria de processos a desempenho do negócio
+title: CMMI — Visão Geral
 ---
 
-- **Capability Maturity Model Integration**
-- Conjunto integrado de melhores práticas para melhoria de processos
-- Aplicável a desenvolvimento, serviços e aquisição
-- Busca reduzir riscos de custo, prazo e qualidade
-- Organiza práticas que ajudam a alcançar objetivos de negócio [@CMMI07]
-
----
-layout: two-cols
-kicker: Organização das práticas
-title: Quatro perspectivas ajudam a enxergar o sistema de trabalho
----
-
-### Gestão de Projetos
-
-- Planejamento
-- Acompanhamento
-
-### Engenharia
-
-- Requisitos
-- Solução e validação
-
-::right::
-
-### Suporte
-
-- Qualidade
-- Configuração e decisões
-
-### Gestão de Processos
-
-- Padronização
-- Medição e melhoria
+- Conjunto de melhores práticas para melhoria de processos.
+- Criado pelo SEI (Software Engineering Institute) da Carnegie Mellon University.
+- Aplicável a desenvolvimento de software, serviços e aquisição.
 
 ---
 layout: default
-kicker: Representação por estágios
-title: Cinco níveis descrevem uma trajetória de previsibilidade
+title: Objetivos do CMMI
 ---
 
-<div class="h-[73%] flex items-center justify-center">
-  <img src="../../assets/maturidade/niveis-cmmi.jpg" alt="Escada com os cinco níveis de maturidade do CMMI" class="max-h-full max-w-[86%] object-contain" />
-</div>
-
----
-layout: two-cols
-kicker: Leitura dos níveis
-title: A evolução vai do trabalho reativo à melhoria contínua
----
-
-### Estabilizar
-
-1. **Inicial** — processos imprevisíveis e reativos
-2. **Gerenciado** — projetos planejam e acompanham o trabalho
-3. **Definido** — processos são padronizados na organização
-
-::right::
-
-### Prever e otimizar
-
-4. **Gerenciado quantitativamente** — desempenho medido e controlado
-5. **Em otimização** — melhoria contínua baseada em evidências
-
-<div class="mt-10 border-l-6 border-[var(--accent)] pl-6 text-2xl font-semibold">
-Subir de nível exige institucionalizar práticas, não apenas documentá-las.
-</div>
-
----
-layout: vs
-kicker: Comparação
-title: Os modelos compartilham a direção, mas oferecem percursos diferentes
-left:
-  title: MPS.BR
-  items: [Sete níveis de maturidade, Passos iniciais mais graduais, Contexto brasileiro e atenção às mPMEs, Compatibilidade com referências internacionais]
-right:
-  title: CMMI
-  items: [Cinco níveis na representação por estágios, Referência internacional, Práticas integradas para diferentes domínios, Forte orientação a desempenho]
-label: ↔
----
-
----
-layout: steps
-kicker: Aplicação
-title: A SoftSolutions pode começar pelo próximo problema observável
-steps:
-  - { title: Diagnosticar, desc: Identificar lacunas e evidências disponíveis, icon: "lucide:scan-search" }
-  - { title: Priorizar, desc: Relacionar dores do negócio a processos críticos, icon: "lucide:list-checks" }
-  - { title: Implementar, desc: Definir práticas adequadas ao contexto, icon: "lucide:wrench" }
-  - { title: Medir, desc: Verificar resultados e ajustar o processo, icon: "lucide:chart-no-axes-column" }
----
+- Aumentar a capacidade das organizações de entregar produtos/serviços de qualidade.
+- Reduzir riscos de custo, prazo e qualidade.
+- Prover um modelo de referência compatível com padrões internacionais.
 
 ---
 layout: default
-kicker: Discussão
-title: Qual seria o primeiro passo da SoftSolutions?
+title: Estrutura do CMMI
 ---
 
-<div class="h-[65%] grid grid-cols-2 gap-14 items-center">
-  <div class="text-4xl font-semibold leading-tight">
-    Escolha um problema prioritário e associe-o a um processo que possa gerar evidências de melhoria.
-  </div>
-  <div class="space-y-6 text-3xl">
-    <div>① Qual dor atacar?</div>
-    <div>② Qual resultado esperar?</div>
-    <div>③ Qual evidência observar?</div>
-  </div>
+- Organizado em **áreas de processo**, agrupadas em categorias:
+  - **Gestão de Projetos**
+  - **Engenharia**
+  - **Suporte**
+  - **Gestão de Processos**
+- Define práticas esperadas para alcançar objetivos de negócio.
+
+---
+layout: default
+title: Níveis de Maturidade
+---
+
+<div class="h-[100%] flex items-center justify-center">
+  <img
+    src="../../assets/maturidade/niveis-cmmi.jpg"
+    alt="Cinco níveis de maturidade do CMMI"
+    class="max-h-full max-w-[86%] object-contain"
+  />
 </div>
+
+---
+layout: default
+title: CMMI na Prática
+---
+
+- Fornece um caminho evolutivo para melhoria de processos.
+- Facilita certificações e competitividade no mercado.
+- Inspirou programas nacionais como o MPS.BR.
 
 ---
 layout: default
