@@ -25,7 +25,7 @@
 | Quarta | 19/08/2026 |  | [Code Smells](aula-03/) |
 | Quinta | 20/08/2026 |  | [Princípios SOLID](aula-04/) |
 | Quarta | 26/08/2026 |  | Princípios SOLID |
-| Quinta | 27/08/2026 |  | Modelos de maturidade: CMMI e MPS.BR |
+| Quinta | 27/08/2026 |  | [Modelos de maturidade: CMMI e MPS.BR](aula-05/) |
 | Quarta | 02/09/2026 |  | Hands-on |
 | Quinta | 03/09/2026 |  | AVALIAÇÃO 1 |
 | Quarta | 09/09/2026 |  | [AULA CANCELADA] |
