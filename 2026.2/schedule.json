@@ -60,7 +60,7 @@
       "date": "26/08/2026",
       "module": "",
       "topic": "Princípios SOLID",
-      "id": ""
+      "id": "aula-04"
     },
     {
       "day": "Quinta",
@@ -68,6 +68,13 @@
       "module": "",
       "topic": "Modelos de maturidade: CMMI e MPS.BR",
       "id": "aula-05"
+    },
+    {
+      "day": "Segunda",
+      "date": "31/08/2026",
+      "module": "",
+      "topic": "[REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final",
+      "id": ""
     },
     {
       "day": "Quarta",
@@ -129,7 +136,7 @@
       "day": "Sábado",
       "date": "26/09/2026",
       "module": "",
-      "topic": "Atividade de Informática",
+      "topic": "[AULA CANCELADA]",
       "id": ""
     },
     {
@@ -144,6 +151,13 @@
       "date": "01/10/2026",
       "module": "",
       "topic": "Tipos de testes",
+      "id": ""
+    },
+    {
+      "day": "Segunda",
+      "date": "05/10/2026",
+      "module": "",
+      "topic": "[REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final",
       "id": ""
     },
     {
@@ -175,6 +189,13 @@
       "id": ""
     },
     {
+      "day": "Segunda",
+      "date": "19/10/2026",
+      "module": "",
+      "topic": "[REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final",
+      "id": ""
+    },
+    {
       "day": "Quarta",
       "date": "21/10/2026",
       "module": "",
@@ -186,6 +207,13 @@
       "date": "22/10/2026",
       "module": "",
       "topic": "Hands-on",
+      "id": ""
+    },
+    {
+      "day": "Segunda",
+      "date": "26/10/2026",
+      "module": "",
+      "topic": "[REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final",
       "id": ""
     },
     {
@@ -217,17 +245,17 @@
       "id": ""
     },
     {
-      "day": "Quarta",
-      "date": "11/11/2026",
+      "day": "Segunda",
+      "date": "09/11/2026",
       "module": "",
-      "topic": "Versionamento de código com git",
+      "topic": "[REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final",
       "id": ""
     },
     {
       "day": "Quarta",
       "date": "11/11/2026",
       "module": "",
-      "topic": "[REPOSIÇÃO - 4 AULAS]",
+      "topic": "Versionamento de código com git",
       "id": ""
     },
     {
@@ -252,13 +280,6 @@
       "id": ""
     },
     {
-      "day": "Quarta",
-      "date": "18/11/2026",
-      "module": "",
-      "topic": "[REPOSIÇÃO - 5 AULAS]",
-      "id": ""
-    },
-    {
       "day": "Quinta",
       "date": "19/11/2026",
       "module": "MD4: Projeto Final",
@@ -270,13 +291,6 @@
       "date": "25/11/2026",
       "module": "",
       "topic": "Desenvolvimento do projeto final",
-      "id": ""
-    },
-    {
-      "day": "Quarta",
-      "date": "11/11/2026",
-      "module": "",
-      "topic": "[REPOSIÇÃO - 4 AULAS]",
       "id": ""
     },
     {
@@ -308,13 +322,6 @@
       "id": ""
     },
     {
-      "day": "Quarta",
-      "date": "09/12/2026",
-      "module": "",
-      "topic": "[REPOSIÇÃO - 5 AULAS] Revisão",
-      "id": ""
-    },
-    {
       "day": "Quinta",
       "date": "10/12/2026",
       "module": "",
@@ -325,7 +332,7 @@
       "day": "Sábado",
       "date": "12/12/2026",
       "module": "",
-      "topic": "Atividade de Informática",
+      "topic": "[AULA CANCELADA]",
       "id": ""
     },
     {

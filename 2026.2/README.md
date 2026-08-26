@@ -24,8 +24,9 @@
 | Quarta | 19/08/2026 |  | [Refatoração](aula-02/) |
 | Quarta | 19/08/2026 |  | [Code Smells](aula-03/) |
 | Quinta | 20/08/2026 |  | [Princípios SOLID](aula-04/) |
-| Quarta | 26/08/2026 |  | Princípios SOLID |
+| Quarta | 26/08/2026 |  | [Princípios SOLID](aula-04/) |
 | Quinta | 27/08/2026 |  | [Modelos de maturidade: CMMI e MPS.BR](aula-05/) |
+| Segunda | 31/08/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 02/09/2026 |  | Hands-on |
 | Quinta | 03/09/2026 |  | AVALIAÇÃO 1 |
 | Quarta | 09/09/2026 |  | [AULA CANCELADA] |
@@ -34,33 +35,33 @@
 | Quinta | 17/09/2026 |  | [AULA CANCELADA] |
 | Quarta | 23/09/2026 |  | [AULA CANCELADA] |
 | Quinta | 24/09/2026 |  | [AULA CANCELADA] |
-| Sábado | 26/09/2026 |  | Atividade de Informática |
+| Sábado | 26/09/2026 |  | [AULA CANCELADA] |
 | Quarta | 30/09/2026 | MD2: Teste de Software | Introdução à Verificação, Validação e Teste |
 | Quinta | 01/10/2026 |  | Tipos de testes |
+| Segunda | 05/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 07/10/2026 |  | Princípios e test smells |
 | Quinta | 08/10/2026 |  | Desenvolvimento dirigido por testes (TDD) |
 | Quarta | 14/10/2026 |  | Jest: primeiro contato |
 | Quinta | 15/10/2026 |  | Jest: tratamento de exceções, funções after e before, testes aninhados e parametrizados |
+| Segunda | 19/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 21/10/2026 |  | Jest: mocks |
 | Quinta | 22/10/2026 |  | Hands-on |
+| Segunda | 26/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 28/10/2026 |  | [AULA CANCELADA] 28 - Dia do Servidor Público |
 | Quinta | 29/10/2026 |  | AVALIAÇÃO 2 |
 | Quarta | 04/11/2026 | MD3: Evolução de Software | Manutenção de software |
 | Quinta | 05/11/2026 |  | [AULA CANCELADA] 05 - Aniversário de Manhuaçu |
+| Segunda | 09/11/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 11/11/2026 |  | Versionamento de código com git |
-| Quarta | 11/11/2026 |  | [REPOSIÇÃO - 4 AULAS] |
 | Quinta | 12/11/2026 |  | Versionamento de código com git |
 | Sábado | 14/11/2026 |  | [AULA CANCELADA] |
 | Quarta | 18/11/2026 |  | AVALIAÇÃO 3 |
-| Quarta | 18/11/2026 |  | [REPOSIÇÃO - 5 AULAS] |
 | Quinta | 19/11/2026 | MD4: Projeto Final | Desenvolvimento do projeto final |
 | Quarta | 25/11/2026 |  | Desenvolvimento do projeto final |
-| Quarta | 11/11/2026 |  | [REPOSIÇÃO - 4 AULAS] |
 | Quinta | 26/11/2026 |  | Desenvolvimento do projeto final |
 | Quarta | 02/12/2026 |  | Desenvolvimento do projeto final |
 | Quinta | 03/12/2026 |  | Entrega do relatório |
 | Quarta | 09/12/2026 |  | Apresentação |
-| Quarta | 09/12/2026 |  | [REPOSIÇÃO - 5 AULAS] Revisão |
 | Quinta | 10/12/2026 |  | Revisão |
-| Sábado | 12/12/2026 |  | Atividade de Informática |
+| Sábado | 12/12/2026 |  | [AULA CANCELADA] |
 | Quarta | 16/12/2026 |  | Revisão |
