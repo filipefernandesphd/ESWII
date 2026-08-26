@@ -425,6 +425,11 @@ Aplicar o **D - Dependency Inversion** ajuda:
 - Tornar o sistema mais flexível;
 - Favorecer manutenção e evolução.
 
+---
+title: Atividade
+---
+Aplique os princípios SOLD no projeto [Loja IF](https://github.com/filipefernandesphd/LojaIF).
+
 
 ---
 layout: default
