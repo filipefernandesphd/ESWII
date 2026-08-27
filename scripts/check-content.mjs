@@ -13,6 +13,9 @@ const SEMESTER_PATTERN = /^[0-9]{4}\.[12]$/u;
 const SEMESTER_LIKE_PATTERN = /^[0-9]{4}\./u;
 const LESSON_PATTERN = /^aula-[0-9]{2}$/u;
 const LESSON_LIKE_PATTERN = /^aula(?:-|$)/iu;
+const HANDSON_PATTERN = /^handson-[0-9]{2}$/u;
+const HANDSON_LIKE_PATTERN = /^(?:handson|hands-on)(?:-|$)/iu;
+const CONTENT_PATTERN = /^(?:aula|handson)-[0-9]{2}$/u;
 const DATE_PATTERN = /^(?:|[0-9]{2}\/[0-9]{2}\/[0-9]{4})$/u;
 const SCHEDULE_FIELDS = ["day", "date", "module", "topic", "id"];
 const REQUIRED_SLIDE_FILES = [
@@ -173,7 +176,7 @@ function matchesJsonType(value, type) {
   return typeof value === type;
 }
 
-function validateAgainstSchema(value, schema, label, instancePath = "$") {
+export function validateAgainstSchema(value, schema, label, instancePath = "$") {
   assert(isPlainObject(schema), `${label}: schema inválido em ${instancePath}.`);
 
   if (Object.hasOwn(schema, "const")) {
@@ -376,8 +379,8 @@ function validateSchedule(schedule, semester, label) {
       `${entryLabel}/date: use uma data real em dd/mm/aaaa ou deixe vazio.`,
     );
     assert(
-      entry.id === "" || LESSON_PATTERN.test(entry.id),
-      `${entryLabel}/id: use aula-NN ou deixe vazio.`,
+      entry.id === "" || CONTENT_PATTERN.test(entry.id),
+      `${entryLabel}/id: use aula-NN, handson-NN ou deixe vazio.`,
     );
     assert(
       entry.id === "" || entry.topic.trim() !== "",
@@ -458,14 +461,14 @@ function escapeMarkdownLinkText(value) {
   return escapeMarkdownCell(value).replaceAll("[", "\\[").replaceAll("]", "\\]");
 }
 
-function renderScheduleTable(schedule, lessons) {
+function renderScheduleTable(schedule, contents) {
   const lines = [
     "| Dia | Data | Módulo | Tópico |",
     "|---|---|---|---|",
   ];
   for (const entry of schedule.entries) {
     const topic =
-      entry.id !== "" && lessons.has(entry.id)
+      entry.id !== "" && contents.has(entry.id)
         ? `[${escapeMarkdownLinkText(entry.topic)}](${entry.id}/)`
         : escapeMarkdownCell(entry.topic);
     lines.push(
@@ -601,8 +604,9 @@ async function discoverSemesters(root) {
   return semesters.sort((left, right) => right.localeCompare(left, "pt-BR"));
 }
 
-async function discoverLessons(semesterDirectory, semester) {
+export async function discoverSemesterContents(semesterDirectory, semester) {
   const lessons = new Set();
+  const handsOns = new Set();
   for (const entry of await readdir(semesterDirectory, { withFileTypes: true })) {
     if (LESSON_PATTERN.test(entry.name)) {
       await assertRealDirectory(
@@ -610,16 +614,61 @@ async function discoverLessons(semesterDirectory, semester) {
         `${semester}/${entry.name}`,
       );
       lessons.add(entry.name);
+    } else if (HANDSON_PATTERN.test(entry.name)) {
+      await assertRealDirectory(
+        path.join(semesterDirectory, entry.name),
+        `${semester}/${entry.name}`,
+      );
+      handsOns.add(entry.name);
     } else if (LESSON_LIKE_PATTERN.test(entry.name)) {
       throw new ContentError(
         `${semester}/${entry.name}: use exatamente aula-NN.`,
       );
+    } else if (HANDSON_LIKE_PATTERN.test(entry.name)) {
+      throw new ContentError(
+        `${semester}/${entry.name}: use exatamente handson-NN.`,
+      );
     }
   }
-  return lessons;
+  return {
+    contents: new Set([...lessons, ...handsOns]),
+    handsOns,
+    lessons,
+  };
 }
 
-async function validateSlideStructure(root, semester, lesson, revision) {
+export async function validateHandsOnStructure(root, semester, handsOn) {
+  const directory = path.join(root, semester, handsOn);
+  const readmePath = path.join(directory, "README.md");
+  await assertRealFile(readmePath, `${semester}/${handsOn}/README.md`);
+  const readme = await readFile(readmePath, "utf8");
+  assert(
+    readme.trim() !== "",
+    `${semester}/${handsOn}/README.md: arquivo vazio.`,
+  );
+
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const target = path.join(directory, entry.name);
+    const label = `${semester}/${handsOn}/${entry.name}`;
+    const info = await lstat(target);
+    assert(!info.isSymbolicLink(), `${label}: link simbólico não é permitido.`);
+    if (entry.name === "README.md") {
+      assert(info.isFile(), `${label}: arquivo regular esperado.`);
+      continue;
+    }
+    assert(
+      !entry.name.startsWith(".") && !FORBIDDEN_PUBLIC_ASSET_NAMES.has(entry.name),
+      `${label}: arquivo não permitido em um hands-on.`,
+    );
+    assert(info.isFile(), `${label}: somente arquivos regulares são permitidos.`);
+    assert(
+      entry.name.endsWith(".md"),
+      `${label}: somente arquivos com extensão minúscula .md são permitidos.`,
+    );
+  }
+}
+
+export async function validateSlideStructure(root, semester, lesson, revision) {
   const lessonDirectory = path.join(root, semester, lesson);
   const slidesDirectory = path.join(lessonDirectory, "slides");
   await assertRealDirectory(slidesDirectory, `${semester}/${lesson}/slides`);
@@ -793,14 +842,17 @@ async function validateSemester(root, semester, scheduleSchema, config) {
   validateAgainstSchema(schedule, scheduleSchema, `${semester}/schedule.json`);
   validateSchedule(schedule, semester, `${semester}/schedule.json`);
 
-  const lessons = await discoverLessons(directory, semester);
+  const { contents, handsOns, lessons } = await discoverSemesterContents(
+    directory,
+    semester,
+  );
   const referenced = new Set(
     schedule.entries.filter((entry) => entry.id !== "").map((entry) => entry.id),
   );
-  const unreferenced = [...lessons].filter((lesson) => !referenced.has(lesson));
+  const unreferenced = [...contents].filter((content) => !referenced.has(content));
   assert(
     unreferenced.length === 0,
-    `${semester}: aulas sem referência no cronograma: ${unreferenced.join(", ")}.`,
+    `${semester}: conteúdos sem referência no cronograma: ${unreferenced.join(", ")}.`,
   );
 
   const readme = await readFile(readmePath, "utf8");
@@ -810,7 +862,7 @@ async function validateSemester(root, semester, scheduleSchema, config) {
     "Cronograma",
     `${semester}/README.md`,
   );
-  const expectedTable = renderScheduleTable(schedule, lessons);
+  const expectedTable = renderScheduleTable(schedule, contents);
   assert(
     normalizeSectionBody(cronograma) === expectedTable,
     `${semester}/README.md: Cronograma desatualizado; execute scripts/sync-schedule-links.mjs.`,
@@ -825,10 +877,15 @@ async function validateSemester(root, semester, scheduleSchema, config) {
     );
   }
 
-  const missing = [...referenced].filter((lesson) => !lessons.has(lesson)).sort();
+  for (const handsOn of [...handsOns].sort()) {
+    await validateHandsOnStructure(root, semester, handsOn);
+  }
+
+  const missing = [...referenced].filter((content) => !contents.has(content)).sort();
   return {
     semester,
     tab: schedule.source.tab,
+    handsOns: handsOns.size,
     lessons: lessons.size,
     records: schedule.entries.length,
     missing,
@@ -876,9 +933,10 @@ export async function validateContent(options = {}) {
     semesters: results,
     semesterCount: results.length,
     lessonCount: results.reduce((total, result) => total + result.lessons, 0),
+    handsOnCount: results.reduce((total, result) => total + result.handsOns, 0),
     recordCount: results.reduce((total, result) => total + result.records, 0),
     missing: results.flatMap((result) =>
-      result.missing.map((lesson) => `${result.semester}/${lesson}`),
+      result.missing.map((content) => `${result.semester}/${content}`),
     ),
   };
 }
@@ -920,11 +978,12 @@ async function main() {
   const result = await validateContent(options);
   process.stdout.write(
     `Conteúdo válido: ${result.semesterCount} semestre(s), ` +
-      `${result.lessonCount} aula(s), ${result.recordCount} registro(s).\n`,
+      `${result.lessonCount} aula(s), ${result.handsOnCount} hands-on(s), ` +
+      `${result.recordCount} registro(s).\n`,
   );
   if (result.missing.length > 0) {
     process.stdout.write(
-      `Aviso: aulas planejadas ainda sem pasta: ${result.missing.join(", ")}.\n`,
+      `Aviso: conteúdos planejados ainda sem pasta: ${result.missing.join(", ")}.\n`,
     );
   }
 }

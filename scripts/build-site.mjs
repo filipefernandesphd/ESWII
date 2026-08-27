@@ -24,6 +24,7 @@ const OUTPUT_DIR = path.join(ROOT, "_site");
 const SITE_DIR = path.join(ROOT, "site");
 const SEMESTER_PATTERN = /^\d{4}\.[12]$/;
 const LESSON_PATTERN = /^aula-\d{2}$/;
+const HANDSON_PATTERN = /^handson-\d{2}$/;
 const INFRASTRUCTURE_NAMES = new Set([
   "AGENTS.md",
   "INSTRUCTIONS.md",
@@ -795,6 +796,44 @@ async function lessonResources(config, sha, basePath, semester, lesson) {
   return resources;
 }
 
+async function handsOnResources(config, sha, semester, handsOn) {
+  const handsOnDir = path.join(ROOT, semester, handsOn);
+  const entries = await readdir(handsOnDir, { withFileTypes: true });
+  const resources = [];
+
+  for (const entry of entries.sort((left, right) => codePointCompare(left.name, right.name))) {
+    const target = path.join(handsOnDir, entry.name);
+    const stats = await lstat(target);
+    const relative = `${semester}/${handsOn}/${entry.name}`;
+
+    if (stats.isSymbolicLink()) {
+      fail(`Link simbólico não permitido no hands-on: ${relative}`);
+    }
+    if (entry.name === "README.md") {
+      if (!stats.isFile()) {
+        fail(`${relative} deve ser um arquivo regular.`);
+      }
+      continue;
+    }
+    if (
+      entry.name.startsWith(".") ||
+      isInfrastructure(entry.name) ||
+      !entry.name.endsWith(".md") ||
+      !stats.isFile()
+    ) {
+      fail(`${relative}: somente arquivos regulares com extensão minúscula .md são permitidos.`);
+    }
+
+    resources.push({
+      href: githubContentUrl(config, sha, "blob", [semester, handsOn, entry.name]),
+      kind: "Arquivo Markdown no GitHub",
+      label: humanizeName(entry.name.slice(0, -3)),
+    });
+  }
+
+  return resources;
+}
+
 function renderResources(resources) {
   const items = resources
     .map(
@@ -864,7 +903,7 @@ async function normalizeSlidevHashRoutes(outputDirectory, publicBase) {
 }
 
 async function compileSlides(basePath, semesters) {
-  const binary = await slidevBinary();
+  let binary;
 
   for (const semester of semesters) {
     const lessons = await discoverDirectories(
@@ -872,6 +911,9 @@ async function compileSlides(basePath, semesters) {
       LESSON_PATTERN,
       "A aula",
     );
+    if (lessons.length > 0) {
+      binary ??= await slidevBinary();
+    }
 
     for (const lesson of lessons.sort(codePointCompare)) {
       const slidesDir = path.join(ROOT, semester, lesson, "slides");
@@ -1040,7 +1082,12 @@ async function auditArtifact(semesters) {
       LESSON_PATTERN,
       "A aula",
     );
-    const allowed = new Set(["index.html", ...lessons]);
+    const handsOns = await discoverDirectories(
+      path.join(ROOT, semester),
+      HANDSON_PATTERN,
+      "O hands-on",
+    );
+    const allowed = new Set(["index.html", ...lessons, ...handsOns]);
     if (await pathExists(path.join(ROOT, semester, "assets"))) {
       allowed.add("assets");
     }
@@ -1058,6 +1105,18 @@ async function auditArtifact(semesters) {
       if (unexpectedLesson.length > 0) {
         fail(
           `Material comum foi copiado para _site/${semester}/${lesson}: ${unexpectedLesson.join(", ")}`,
+        );
+      }
+    }
+
+    for (const handsOn of handsOns) {
+      const handsOnOutput = path.join(semesterDir, handsOn);
+      const unexpectedHandsOn = (await readdir(handsOnOutput)).filter(
+        (entry) => entry !== "index.html",
+      );
+      if (unexpectedHandsOn.length > 0) {
+        fail(
+          `Material foi copiado para _site/${semester}/${handsOn}: ${unexpectedHandsOn.join(", ")}`,
         );
       }
     }
@@ -1173,6 +1232,51 @@ async function main() {
           ],
           config,
           description: `${config.course.name} — ${lessonLabel}, ${semesterLabel}`,
+          sha,
+          title,
+        }),
+      );
+    }
+
+    const handsOns = await discoverDirectories(
+      semesterDir,
+      HANDSON_PATTERN,
+      "O hands-on",
+    );
+    for (const handsOn of handsOns.sort(codePointCompare)) {
+      const handsOnDir = path.join(semesterDir, handsOn);
+      const readmePath = path.join(handsOnDir, "README.md");
+      let stats;
+      try {
+        stats = await lstat(readmePath);
+      } catch {
+        fail(`${semester}/${handsOn}/README.md é obrigatório.`);
+      }
+      if (stats.isSymbolicLink() || !stats.isFile()) {
+        fail(`${semester}/${handsOn}/README.md deve ser um arquivo real.`);
+      }
+
+      const readme = await readFile(readmePath, "utf8");
+      if (readme.trim() === "") {
+        fail(`${semester}/${handsOn}/README.md não pode estar vazio.`);
+      }
+      const handsOnLabel = `Hands-on ${handsOn.slice(-2)}`;
+      const title = extractTitle(readme, handsOnLabel);
+      const resources = await handsOnResources(config, sha, semester, handsOn);
+      const resourcesSection = resources.length > 0 ? `\n${renderResources(resources)}` : "";
+
+      await writePage(
+        path.join(semester, handsOn),
+        renderPage({
+          basePath,
+          body: `<article class="markdown">${renderMarkdown(readme)}</article>${resourcesSection}`,
+          breadcrumbs: [
+            { label: "Início", href: basePath },
+            { label: semesterLabel, href: sitePath(basePath, semester) },
+            { label: handsOnLabel, href: sitePath(basePath, semester, handsOn) },
+          ],
+          config,
+          description: `${config.course.name} — ${handsOnLabel}, ${semesterLabel}`,
           sha,
           title,
         }),

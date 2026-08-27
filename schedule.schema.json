@@ -62,7 +62,7 @@
           },
           "id": {
             "type": "string",
-            "pattern": "^(?:|aula-[0-9]{2})$"
+            "pattern": "^(?:|(?:aula|handson)-[0-9]{2})$"
           }
         }
       }

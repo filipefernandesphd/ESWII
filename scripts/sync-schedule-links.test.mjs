@@ -142,6 +142,39 @@ test("links only exact, existing, direct lesson directories", async (t) => {
   assert.equal(afterLessonCreation.changed, true);
 });
 
+test("links existing hands-ons and keeps planned hands-ons as text", async (t) => {
+  const fixture = await createFixture();
+  t.after(() => rm(fixture.root, { recursive: true, force: true }));
+  const schedulePath = path.join(fixture.semester, "schedule.json");
+  const schedule = JSON.parse(await readFile(schedulePath, "utf8"));
+  schedule.entries.push(
+    {
+      day: "Quinta",
+      date: "13/08/2026",
+      module: "M1",
+      topic: "Exercícios guiados",
+      id: "handson-01",
+    },
+    {
+      day: "Sexta",
+      date: "14/08/2026",
+      module: "M1",
+      topic: "Prática futura",
+      id: "handson-02",
+    },
+  );
+  await writeFile(schedulePath, `${JSON.stringify(schedule, null, 2)}\n`);
+  await mkdir(path.join(fixture.semester, "handson-01"));
+
+  const result = await synchronizeScheduleLinks({ root: fixture.root });
+  assert.equal(result.links, 3);
+  assert.deepEqual(result.missing, ["aula-02", "handson-02"]);
+  const readme = await readFile(path.join(fixture.semester, "README.md"), "utf8");
+  assert.match(readme, /\[Exercícios guiados\]\(handson-01\/\)/u);
+  assert.match(readme, /\| Prática futura \|/u);
+  assert.doesNotMatch(readme, /\[Prática futura\]/u);
+});
+
 test("rejects a symbolic link named as a lesson", async (t) => {
   const fixture = await createFixture();
   t.after(() => rm(fixture.root, { recursive: true, force: true }));
@@ -149,7 +182,7 @@ test("rejects a symbolic link named as a lesson", async (t) => {
 
   await assert.rejects(
     synchronizeScheduleLinks({ root: fixture.root, write: false }),
-    /link simbólico não pode representar uma aula/u,
+    /link simbólico não pode representar um conteúdo/u,
   );
 });
 
@@ -160,7 +193,32 @@ test("rejects a regular file named as a lesson", async (t) => {
 
   await assert.rejects(
     synchronizeScheduleLinks({ root: fixture.root, write: false }),
-    /nome de uma aula deve ser um diretório/u,
+    /nome de um conteúdo deve ser um diretório/u,
+  );
+});
+
+test("rejects a symbolic link named as a hands-on", async (t) => {
+  const fixture = await createFixture();
+  t.after(() => rm(fixture.root, { recursive: true, force: true }));
+  await symlink(
+    path.join(fixture.semester, "aula-01"),
+    path.join(fixture.semester, "handson-01"),
+  );
+
+  await assert.rejects(
+    synchronizeScheduleLinks({ root: fixture.root, write: false }),
+    /link simbólico não pode representar um conteúdo/u,
+  );
+});
+
+test("rejects a regular file named as a hands-on", async (t) => {
+  const fixture = await createFixture();
+  t.after(() => rm(fixture.root, { recursive: true, force: true }));
+  await writeFile(path.join(fixture.semester, "handson-01"), "not a directory");
+
+  await assert.rejects(
+    synchronizeScheduleLinks({ root: fixture.root, write: false }),
+    /nome de um conteúdo deve ser um diretório/u,
   );
 });
 
