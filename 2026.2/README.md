@@ -27,7 +27,7 @@
 | Quarta | 26/08/2026 |  | [Princípios SOLID](aula-04/) |
 | Quinta | 27/08/2026 |  | [Modelos de maturidade: CMMI e MPS.BR](aula-05/) |
 | Segunda | 31/08/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
-| Quarta | 02/09/2026 |  | Hands-on |
+| Quarta | 02/09/2026 |  | [Hands-on](handson-01/) |
 | Quinta | 03/09/2026 |  | AVALIAÇÃO 1 |
 | Quarta | 09/09/2026 |  | [AULA CANCELADA] |
 | Quinta | 10/09/2026 |  | [AULA CANCELADA] |
