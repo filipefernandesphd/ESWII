@@ -10,6 +10,7 @@ addons:
   - slidev-addon-citations
 mdc: true
 routerMode: hash
+browserExporter: build
 preloadImages: false
 biblio:
   filename: references.bib

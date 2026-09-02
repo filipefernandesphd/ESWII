@@ -8,6 +8,7 @@ themeConfig:
   variant: minimal
 mdc: true
 routerMode: hash
+browserExporter: build
 preloadImages: false
 layout: academic-cover
 ---
