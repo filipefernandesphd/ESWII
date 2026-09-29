@@ -172,3 +172,24 @@ steps:
   - { title: Aula 06, desc: Entre na página desta aula, icon: "lucide:book-open" }
   - { title: Hands-on, desc: Clique no link e faça a atividade, icon: "lucide:list-checks" }
 ---
+
+---
+layout: feature
+kicker: Encerramento
+title: Obrigado!
+columns: 2
+features:
+
+- { icon: "lucide:globe", desc: filipefernandesphd.com }
+- { icon: "lucide:instagram", desc: "@filipfernandesphd" }
+---
+---
+layout: two-cols
+title: Avaliação da Experiência de Aprendizagem
+---
+- **[Seu feedback é muito importante!](https://forms.gle/CMfL5oTm235FfuH59)**
+- Obtenha o código da avaliação
+
+::right::
+
+<img src="../../assets/qrcode-avaliacao.png" width="300px" />
