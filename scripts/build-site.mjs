@@ -738,6 +738,7 @@ function humanizeName(name) {
   const known = {
     atividades: "Atividades",
     codigos: "Códigos",
+    "hands-on": "Hands-on",
     materiais_de_apoio: "Materiais de apoio",
     slides: "Slides",
   };
