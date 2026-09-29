@@ -1,0 +1,1 @@
+import"../useNav-9tsEEojB.js";import"./context-zHG352Ao.js";import"../syncState-cKS9Xlz8.js";import{d as e,f as t,p as n}from"../index-D9SIKOWS.js";import"../useDrawings-aeG-jCgp.js";function r(){return{isColorSchemaConfigured:e,isDark:t,toggleDark:n}}export{r as t};

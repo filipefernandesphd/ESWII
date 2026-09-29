@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Engenharia de Software II — Hands-on 01, 2026/2">
+  <title>Hands-on 01 · Engenharia de Software II</title>
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="shell">
+      <a class="site-title" href="/">ESWII</a>
+      <span class="site-context">Bacharelado em Sistemas de Informação</span>
+    </div>
+  </header>
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Navegação estrutural"><ol><li><a href="/">Início</a></li><li><a href="/2026.2/">2026/2</a></li><li><span aria-current="page">Hands-on 01</span></li></ol></nav>
+    <main id="conteudo" class="content">
+      <article class="markdown"><h1 id="hands-on-01">Hands-on 01</h1>
+<h2 id="refactoring-code-smells-e-solid">Refactoring, Code Smells e SOLID</h2>
+<h3 id="objetivo">Objetivo</h3>
+<p>Revisar e aplicar conceitos de <strong>refactoring</strong>, <strong>code smells</strong> e <strong>princípios SOLID</strong>, relacionando teoria, análise de código e melhoria incremental de projetos orientados a objetos.</p>
+<blockquote><p><strong>Regra fundamental:</strong> sempre que uma questão envolver refactoring, preserve o comportamento observável do programa. Quando houver testes automatizados, execute-os antes e depois das alterações.</p></blockquote>
+<hr>
+<h1 id="1-refactoring">1. Refactoring</h1>
+<h2 id="1-1-revisao-conceitual">1.1 Revisão conceitual</h2>
+<ol><li>Defina <strong>refactoring</strong> e explique por que uma alteração que muda o comportamento externo do sistema não deve ser classificada como refactoring.</li><li>Explique como refactorings podem melhorar a manutenibilidade de um software sem necessariamente adicionar novas funcionalidades.</li><li>Diferencie <strong>refactoring oportunista</strong> de <strong>refactoring planejado</strong>. Em quais situações cada abordagem tende a ser adequada?</li><li>Explique por que uma suíte de testes automatizados reduz o risco durante um processo de refactoring.</li></ol>
+<h2 id="1-2-exercicios-adaptados-de-engenharia-de-software-moderna">1.2 Exercícios adaptados de <em>Engenharia de Software Moderna</em></h2>
+<p>As questões abaixo foram adaptadas dos exercícios do Capítulo 9.</p>
+<ol><li>Considere as afirmações abaixo. Identifique a alternativa que <strong>não representa necessariamente um objetivo de refactoring</strong> e justifique:</li></ol>
+<ul><li>melhorar a estrutura interna do software;</li><li>facilitar a compreensão do código;</li><li>reduzir o esforço de futuras modificações;</li><li>melhorar modularidade e testabilidade;</li><li>aumentar o desempenho de execução do sistema.</li></ul>
+<ol><li>Imagine dois sistemas equivalentes, desenvolvidos por equipes com experiência semelhante. Depois de vários meses, a equipe do Sistema A mantém aproximadamente o mesmo ritmo de implementação de funcionalidades, enquanto a equipe do Sistema B passa a gastar progressivamente mais tempo para realizar mudanças. Explique qual deles provavelmente recebeu refactorings de forma mais sistemática e justifique.</li></ol>
+<ol><li>Cite <strong>dois refactorings que possam ser considerados operações inversas</strong>. Explique o efeito produzido quando um é executado logo após o outro.</li></ol>
+<ol><li>Considere o método abaixo:</li></ol>
+<pre><code class="language-java">public void finalizarPedido(Pedido pedido) {
+    validarPedido(pedido);
+
+    double subtotal = pedido.calcularSubtotal();
+    double desconto = calcularDesconto(pedido);
+    double total = subtotal - desconto;
+
+    System.out.println(&quot;Subtotal: &quot; + subtotal);
+    System.out.println(&quot;Desconto: &quot; + desconto);
+    System.out.println(&quot;Total: &quot; + total);
+
+    salvarPedido(pedido);
+}</code></pre>
+<p>Aplique <strong>Extract Method</strong> de modo que a responsabilidade de exibir o resumo financeiro seja movida para um novo método. Indique:</p>
+<ul><li>o nome do método extraído;</li><li>os parâmetros necessários;</li><li>como ficará o método <code>finalizarPedido</code> após o refactoring.</li></ul>
+<ol><li>Crie um pequeno exemplo em Java contendo um método com pelo menos três responsabilidades distintas. Em seguida:</li></ol>
+<ol><li>execute <strong>Extract Method</strong>;</li><li>execute <strong>Rename Method</strong> onde houver nomes pouco expressivos;</li><li>compare a versão inicial e a versão refatorada.</li></ol>
+<ol><li>Utilize uma IDE com suporte a refactoring, como IntelliJ IDEA ou Eclipse, e realize uma operação automática de <strong>Rename Method</strong>, <strong>Extract Method</strong> ou <strong>Move Method</strong>. Explique quais verificações realizadas pela IDE tornam essa operação mais segura do que uma alteração puramente textual.</li></ol>
+<h2 id="1-3-pratica-em-repositorio-publico-gilded-rose-refactoring-kata">1.3 Prática em repositório público — Gilded Rose Refactoring Kata</h2>
+<p>Repositório:</p>
+<p>https://github.com/emilybache/GildedRose-Refactoring-Kata</p>
+<p>O <strong>Gilded Rose Refactoring Kata</strong> é um exercício clássico para praticar melhoria incremental de código legado sem alterar seu comportamento.</p>
+<h3 id="atividade">Atividade</h3>
+<ol><li>Clone o repositório.</li><li>Utilize preferencialmente a implementação Java.</li><li>Execute os testes existentes e registre o resultado inicial.</li><li>Analise a implementação antes de realizar qualquer modificação.</li><li>Realize pelo menos <strong>três refactorings distintos</strong>, tais como:</li></ol>
+<ul><li>Extract Method;</li><li>Rename Method/Variable;</li><li>Extract Class;</li><li>Move Method;</li><li>Replace Conditional with Polymorphism, quando justificável.</li></ul>
+<ol><li>Faça alterações pequenas e execute os testes após cada etapa.</li><li>Para cada refactoring, registre:</li></ol>
+<ul><li>problema observado;</li><li>refactoring aplicado;</li><li>justificativa;</li><li>evidência de que o comportamento foi preservado.</li></ul>
+<hr>
+<h1 id="2-code-smells">2. Code Smells</h1>
+<h2 id="2-1-revisao-conceitual">2.1 Revisão conceitual</h2>
+<ol><li>Defina <strong>code smell</strong> e explique por que sua existência não significa automaticamente que há um defeito funcional no software.</li><li>Explique a relação entre <strong>code smells</strong> e <strong>refactoring</strong>.</li><li>Diferencie os seguintes smells:</li></ol>
+<ul><li>código duplicado;</li><li>método longo;</li><li>classe grande;</li><li>classe de dados;</li><li>feature envy;</li><li>primitive obsession.</li></ul>
+<ol><li>Por que o contexto é importante antes de decidir eliminar um code smell?</li></ol>
+<h2 id="2-2-exercicios-adaptados-de-engenharia-de-software-moderna">2.2 Exercícios adaptados de <em>Engenharia de Software Moderna</em></h2>
+<p>As questões abaixo foram adaptadas da seção de Code Smells e dos exercícios do Capítulo 9.</p>
+<ol><li>Considere uma função que calcula Fibonacci. Descreva como seriam exemplos conceituais de clones:</li></ol>
+<ul><li>Tipo 1;</li><li>Tipo 2;</li><li>Tipo 3;</li><li>Tipo 4.</li></ul>
+<p>Não é necessário implementar os quatro clones; descreva precisamente as diferenças em relação ao código original.</p>
+<ol><li>Considere uma classe <code>Dinheiro</code> que armazena internamente um valor e possui um método que altera esse valor ao receber outro objeto <code>Dinheiro</code>.</li></ol>
+<ol><li>Explique por que os objetos dessa classe são mutáveis.</li><li>Reprojete a classe para que seus objetos sejam <strong>imutáveis</strong>.</li><li>Explique qual impacto a mudança causa no método que realiza a soma.</li></ol>
+<ol><li>Analise o código abaixo:</li></ol>
+<pre><code class="language-java">// classe responsável por representar um produto
+class Produto {
+    // nome do produto
+    String nome;
+
+    // preço do produto
+    double preco;
+
+    // construtor da classe Produto
+    Produto(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+}</code></pre>
+<p>Explique quais comentários são redundantes e como nomes adequados podem tornar parte dessa documentação desnecessária.</p>
+<ol><li>Para cada situação abaixo, identifique o code smell predominante e sugira pelo menos um possível refactoring:</li></ol>
+<ol><li>o mesmo bloco de validação aparece em quatro métodos;</li><li>um método possui dezenas de linhas e executa validação, cálculo, persistência e envio de e-mail;</li><li>uma classe possui muitos atributos e métodos pertencentes a grupos de responsabilidades diferentes;</li><li>uma classe consulta repetidamente dados de outra classe para realizar cálculos que parecem pertencer ao segundo objeto;</li><li>vários métodos recebem repetidamente <code>String cidade</code>, <code>String estado</code> e <code>String cep</code> como parâmetros separados;</li><li>diversas regras de domínio são representadas apenas por <code>String</code> e <code>int</code>, com validações espalhadas pelo sistema.</li></ol>
+<h2 id="2-3-pratica-em-repositorio-publico-tasklist-refactoring">2.3 Prática em repositório público — TaskList Refactoring</h2>
+<p>Repositório:</p>
+<p>https://github.com/SarthakMakhija/task-list-refactoring</p>
+<p>O projeto foi preparado para ensino de refactoring e contém exemplos de smells como <strong>broken encapsulation, data class, divergent change, feature envy, long method, duplicate code, switch statements e primitive obsession</strong>.</p>
+<h3 id="atividade-2">Atividade</h3>
+<ol><li>Clone o repositório e execute a aplicação/testes disponíveis.</li><li>Analise a versão de código indicada pelo projeto como ponto de partida para refactoring.</li><li>Identifique pelo menos <strong>cinco code smells distintos</strong>.</li><li>Para cada smell encontrado, registre:</li></ol>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col" class="align-left">Evidência no código</th><th scope="col" class="align-left">Code smell</th><th scope="col" class="align-left">Consequência para manutenção</th><th scope="col" class="align-left">Refactoring sugerido</th></tr></thead><tbody><tr><td class="align-left"></td><td class="align-left"></td><td class="align-left"></td><td class="align-left"></td></tr></tbody></table></div>
+<ol><li>Escolha pelo menos <strong>três smells</strong> e realize os refactorings correspondentes.</li><li>Preserve o comportamento da aplicação.</li><li>Compare a estrutura do código antes e depois das mudanças.</li></ol>
+<hr>
+<h1 id="3-solid">3. SOLID</h1>
+<h2 id="3-1-revisao-conceitual">3.1 Revisão conceitual</h2>
+<p>Para cada princípio, escreva:</p>
+<ul><li>sua definição;</li><li>o problema de projeto que procura reduzir;</li><li>um pequeno exemplo de violação;</li><li>uma estratégia possível para corrigir a violação.</li></ul>
+<p>Princípios:</p>
+<ol><li><strong>S — Single Responsibility Principle (SRP)</strong>;</li><li><strong>O — Open/Closed Principle (OCP)</strong>;</li><li><strong>L — Liskov Substitution Principle (LSP)</strong>;</li><li><strong>I — Interface Segregation Principle (ISP)</strong>;</li><li><strong>D — Dependency Inversion Principle (DIP)</strong>.</li></ol>
+<h2 id="3-2-exercicios-adaptados-de-engenharia-de-software-moderna">3.2 Exercícios adaptados de <em>Engenharia de Software Moderna</em></h2>
+<p>As questões abaixo foram adaptadas dos exercícios e exemplos do Capítulo 5.</p>
+<ol><li>Um manipulador de clique de uma interface gráfica realiza, no mesmo método:</li></ol>
+<ul><li>leitura dos campos da tela;</li><li>consulta de contas bancárias;</li><li>início de transação;</li><li>transferência entre contas;</li><li>tratamento de rollback;</li><li>atualização da interface.</li></ul>
+<p>Qual princípio SOLID está principalmente comprometido? Proponha uma reorganização das responsabilidades.</p>
+<ol><li>Considere uma classe base cujo método aceita qualquer valor <code>x &gt; 0</code>. Uma subclasse sobrescreve o método, mas passa a aceitar apenas <code>x &gt; 10</code>. Além disso, a classe base garante um resultado positivo, enquanto a subclasse pode retornar valores negativos.</li></ol>
+<ol><li>Qual princípio SOLID está sendo violado?</li><li>Explique a violação considerando pré-condições e pós-condições.</li></ol>
+<ol><li>Um sistema calcula descontos da seguinte forma:</li></ol>
+<pre><code class="language-java">if (tipoCliente.equals(&quot;ALUNO&quot;)) {
+    // regra A
+} else if (tipoCliente.equals(&quot;SERVIDOR&quot;)) {
+    // regra B
+} else if (tipoCliente.equals(&quot;CONVENIADO&quot;)) {
+    // regra C
+}</code></pre>
+<p>Sempre que surge um novo tipo de cliente, o método precisa ser modificado.</p>
+<ol><li>Qual princípio SOLID deve orientar a melhoria desse projeto?</li><li>Proponha uma solução orientada a objetos que permita adicionar novas políticas de desconto com menor impacto no código existente.</li></ol>
+<ol><li>Uma interface <code>Funcionario</code> declara os métodos:</li></ol>
+<pre><code class="language-java">trabalhar();
+registrarPonto();
+dirigirVeiculo();
+aprovarPagamento();</code></pre>
+<p>Algumas implementações precisam lançar exceções ou deixar métodos vazios porque não realizam todas essas operações.</p>
+<ol><li>Qual princípio SOLID está sendo violado?</li><li>Como as interfaces poderiam ser reorganizadas?</li></ol>
+<ol><li>Uma classe de serviço cria diretamente sua infraestrutura:</li></ol>
+<pre><code class="language-java">class PedidoService {
+    private MySqlPedidoRepository repository = new MySqlPedidoRepository();
+    private EmailSender emailSender = new SmtpEmailSender();
+}</code></pre>
+<ol><li>Qual princípio SOLID está comprometido?</li><li>Quais são os efeitos dessa decisão sobre testes e substituição de tecnologias?</li><li>Reprojete conceitualmente a classe utilizando abstrações e injeção de dependências.</li></ol>
+<h2 id="3-3-pratica-em-repositorio-publico-solid-em-java">3.3 Prática em repositório público — SOLID em Java</h2>
+<p>Repositório:</p>
+<p>https://github.com/mikeknep/SOLID</p>
+<p>O projeto apresenta exemplos em Java para os cinco princípios SOLID, incluindo versões que demonstram projetos adequados e inadequados.</p>
+<h3 id="atividade-3">Atividade</h3>
+<ol><li>Clone ou navegue pelo repositório.</li><li>Para cada princípio SOLID:</li><li>analise a versão considerada inadequada;</li><li>identifique a violação;</li><li>analise a versão melhorada;</li><li>explique quais dependências ou responsabilidades foram alteradas;</li><li>descreva uma situação real em que o mesmo princípio poderia ser aplicado.</li><li>Escolha um dos exemplos e implemente uma terceira versão própria, mantendo o princípio estudado, mas utilizando outro domínio.</li></ol>
+<h2 id="3-4-desafio-aplicado-loja-if">3.4 Desafio aplicado — Loja IF</h2>
+<p>Repositório:</p>
+<p>https://github.com/filipefernandesphd/lojaif</p>
+<p>A <strong>Loja IF</strong> é uma aplicação Java de comércio eletrônico criada para uma atividade prática envolvendo evolução de software e princípios SOLID.</p>
+<h3 id="atividade-4">Atividade</h3>
+<ol><li>Clone o repositório.</li><li>Compile o projeto e execute os testes antes de realizar alterações.</li><li>Explore as classes e compreenda como produtos, pedidos, descontos, pagamentos, estoque, entregas, notificações e relatórios colaboram.</li><li>Identifique situações que dificultam manutenção, extensão ou substituição de componentes.</li><li>Para cada situação encontrada, registre:</li></ol>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col" class="align-left">Classe/trecho</th><th scope="col" class="align-left">Problema observado</th><th scope="col" class="align-left">Princípio SOLID relacionado</th><th scope="col" class="align-left">Consequência</th><th scope="col" class="align-left">Solução proposta</th></tr></thead><tbody><tr><td class="align-left"></td><td class="align-left"></td><td class="align-left"></td><td class="align-left"></td><td class="align-left"></td></tr></tbody></table></div>
+<ol><li>Analise explicitamente os <strong>cinco princípios SOLID</strong>. Para cada princípio:</li></ol>
+<ul><li>encontre uma evidência de aplicação inadequada ou uma oportunidade real de melhoria;</li><li>explique por que o princípio se aplica à situação;</li><li>realize o refactoring necessário;</li><li>preserve o comportamento existente.</li></ul>
+<ol><li>Execute novamente os testes após cada conjunto de alterações.</li><li>Faça commits pequenos e semanticamente claros, preferencialmente um por princípio ou por refactoring relevante.</li><li>Ao final, produza um resumo contendo:</li></ol>
+<ul><li>principais problemas encontrados;</li><li>princípios utilizados;</li><li>refactorings realizados;</li><li>impacto esperado sobre coesão, acoplamento, extensibilidade e testabilidade.</li></ul>
+<hr>
+<h1 id="4-sintese">4. Síntese</h1>
+<p>Responda de forma sucinta:</p>
+<ol><li>Todo code smell representa uma violação de SOLID? Justifique.</li><li>Toda violação de SOLID deve ser imediatamente refatorada? Justifique considerando contexto e custo de manutenção.</li><li>Qual é a relação entre <strong>code smell → decisão de refactoring → melhoria de projeto → princípios SOLID</strong>?</li><li>Por que testes automatizados são especialmente importantes quando um sistema apresenta muitos code smells e precisa passar por refactorings estruturais?</li></ol>
+<hr>
+<h1 id="referencias">Referências</h1>
+<ul><li>Marco Tulio Valente. <strong>Engenharia de Software Moderna — Capítulo 9: Refactoring</strong>.  </li></ul>
+<p>https://engsoftmoderna.info/cap9.html</p>
+<ul><li>Marco Tulio Valente. <strong>Engenharia de Software Moderna — Capítulo 5: Princípios de Projeto</strong>.  </li></ul>
+<p>https://engsoftmoderna.info/cap5.html#solid-e-outros-princ%C3%ADpios-de-projeto</p>
+<ul><li>Emily Bache. <strong>Gilded Rose Refactoring Kata</strong>.  </li></ul>
+<p>https://github.com/emilybache/GildedRose-Refactoring-Kata</p>
+<ul><li>Sarthak Makhija. <strong>TaskList Refactoring</strong>.  </li></ul>
+<p>https://github.com/SarthakMakhija/task-list-refactoring</p>
+<ul><li>Mike Knepper. <strong>SOLID Design Principles in Java</strong>.  </li></ul>
+<p>https://github.com/mikeknep/SOLID</p>
+<ul><li>Filipe Fernandes. <strong>Loja IF</strong>.  </li></ul>
+<p>https://github.com/filipefernandesphd/lojaif</p>
+<blockquote><p>Os exercícios identificados como adaptados foram reformulados para uso didático nesta atividade, preservando os conceitos abordados nas referências, sem constituir reprodução literal do material original.</p></blockquote></article>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <div class="shell">
+      <span>IF Sudeste MG</span>
+      <span aria-hidden="true"> · </span>
+      <a href="https://github.com/filipefernandesphd/ESWII/commit/df6d2f651e06b34bbd1c4ea067e229d7ffb7fd3f">revisão df6d2f651e06</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -37,7 +37,7 @@
 | Quinta | 24/09/2026 |  | [AULA CANCELADA] |
 | Sábado | 26/09/2026 |  | [AULA CANCELADA] |
 | Quarta | 30/09/2026 | MD2: Teste de Software | [Introdução à Verificação, Validação e Teste](aula-06/) |
-| Quinta | 01/10/2026 |  | Tipos de testes |
+| Quinta | 01/10/2026 |  | [Tipos de testes](aula-07/) |
 | Segunda | 05/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 07/10/2026 |  | Princípios e test smells |
 | Quinta | 08/10/2026 |  | Desenvolvimento dirigido por testes (TDD) |
