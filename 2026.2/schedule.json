@@ -164,28 +164,28 @@
       "day": "Quarta",
       "date": "07/10/2026",
       "module": "",
-      "topic": "Princípios e test smells",
-      "id": ""
+      "topic": "Jest: primeiros passos",
+      "id": "aula-08"
     },
     {
       "day": "Quinta",
       "date": "08/10/2026",
       "module": "",
-      "topic": "Desenvolvimento dirigido por testes (TDD)",
+      "topic": "Jest: funções after e before, testes aninhados e parametrizados",
       "id": ""
     },
     {
       "day": "Quarta",
       "date": "14/10/2026",
       "module": "",
-      "topic": "Jest: primeiro contato",
+      "topic": "Jest: tratamento de exceções e mocks",
       "id": ""
     },
     {
       "day": "Quinta",
       "date": "15/10/2026",
       "module": "",
-      "topic": "Jest: tratamento de exceções, funções after e before, testes aninhados e parametrizados",
+      "topic": "Hands-on",
       "id": ""
     },
     {
@@ -199,14 +199,21 @@
       "day": "Quarta",
       "date": "21/10/2026",
       "module": "",
-      "topic": "Jest: mocks",
+      "topic": "Desenvolvimento dirigido por testes (TDD)",
       "id": ""
     },
     {
       "day": "Quinta",
       "date": "22/10/2026",
       "module": "",
-      "topic": "Hands-on",
+      "topic": "Princípios FIRST",
+      "id": ""
+    },
+    {
+      "day": "Quinta",
+      "date": "22/10/2026",
+      "module": "",
+      "topic": "Test smells",
       "id": ""
     },
     {

@@ -39,13 +39,14 @@
 | Quarta | 30/09/2026 | MD2: Teste de Software | [Introdução à Verificação, Validação e Teste](aula-06/) |
 | Quinta | 01/10/2026 |  | [Tipos de testes](aula-07/) |
 | Segunda | 05/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
-| Quarta | 07/10/2026 |  | Princípios e test smells |
-| Quinta | 08/10/2026 |  | Desenvolvimento dirigido por testes (TDD) |
-| Quarta | 14/10/2026 |  | Jest: primeiro contato |
-| Quinta | 15/10/2026 |  | Jest: tratamento de exceções, funções after e before, testes aninhados e parametrizados |
+| Quarta | 07/10/2026 |  | [Jest: primeiros passos](aula-08/) |
+| Quinta | 08/10/2026 |  | Jest: funções after e before, testes aninhados e parametrizados |
+| Quarta | 14/10/2026 |  | Jest: tratamento de exceções e mocks |
+| Quinta | 15/10/2026 |  | Hands-on |
 | Segunda | 19/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
-| Quarta | 21/10/2026 |  | Jest: mocks |
-| Quinta | 22/10/2026 |  | Hands-on |
+| Quarta | 21/10/2026 |  | Desenvolvimento dirigido por testes (TDD) |
+| Quinta | 22/10/2026 |  | Princípios FIRST |
+| Quinta | 22/10/2026 |  | Test smells |
 | Segunda | 26/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 28/10/2026 |  | [AULA CANCELADA] 28 - Dia do Servidor Público |
 | Quinta | 29/10/2026 |  | AVALIAÇÃO 2 |
