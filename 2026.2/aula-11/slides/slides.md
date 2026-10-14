@@ -182,6 +182,82 @@ expect(enviar).toHaveBeenCalledWith('pedido-1');
 
 ---
 layout: code
+kicker: Exemplo
+title: Frete.js
+---
+```js[font=large]
+const freteCorreiosAPI = require('./CorreiosAPI');
+
+class Frete {
+    calcular(regiao){
+        return freteCorreiosAPI(regiao);
+    }
+}
+
+module.exports = Frete;
+```
+
+---
+layout: code
+kicker: Exemplo
+title: CorreiosAPI.js
+---
+```js[font=extralarge]
+function freteCorreiosAPI() {
+    return null;
+}
+
+module.exports = freteCorreiosAPI;
+```
+
+---
+layout: code
+kicker: Exemplo
+title: Frete.test.js (versão 1)
+---
+```js[font=large]
+const Frete = require('./Frete');
+
+it('deve calcular frete para o sudeste', ()=>{
+    const frete = new Frete();
+    const valorfrete = frete.calcular('sudeste');
+    expect(valorfrete).toBeCloseTo(90.9);
+});
+```
+
+```bash
+FAIL  ./Frete.test.js
+✕ deve calcular frete para o sudeste (3 ms)
+...
+Received has value: null
+```
+
+---
+layout: code
+kicker: Exemplo
+title: Frete.test.js (versão 2)
+---
+```js[font=normal]
+const Frete = require('./Frete');
+const freteCorreiosAPI = require('./CorreiosAPI');  // incluir API
+
+jest.mock('./CorreiosAPI');  // mockar CorreiosAPI por completo
+
+it('deve calcular frete para o sudeste', async ()=>{  // inserir async
+    const frete = new Frete();
+    freteCorreiosAPI.mockResolvedValue(90.9); // atribuir valor mockado
+    const valorfrete = await frete.calcular('sudeste'); // inserir await
+    expect(valorfrete).toBeCloseTo(90.9);
+});
+```
+
+```bash
+PASS  ./Frete.test.js
+✓ deve calcular frete para o sudeste (1 ms)
+```
+
+<!-- ---
+layout: code
 title: Exemplo 1 — retorno configurado
 ---
 
@@ -231,9 +307,9 @@ test('calcula total com preço remoto', async () => {
 });
 ```
 
-<Callout icon="lucide:clock-3">Para rejeição, use <code>mockRejectedValue(erro)</code> e aguarde a Promise.</Callout>
+<Callout icon="lucide:clock-3">Para rejeição, use <code>mockRejectedValue(erro)</code> e aguarde a Promise.</Callout> -->
 
----
+<!-- ---
 layout: section
 index: "D"
 title: "Desenvolvimento"
@@ -273,7 +349,7 @@ title: O que manter real e o que simular?
 
 ::right::
 
-<Callout icon="lucide:target">Teste a regra em vários cenários sem depender de rede, banco ou catálogo real.</Callout>
+<Callout icon="lucide:target">Teste a regra em vários cenários sem depender de rede, banco ou catálogo real.</Callout> -->
 
 ---
 layout: section
