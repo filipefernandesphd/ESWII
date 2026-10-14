@@ -1,0 +1,240 @@
+/* Overrides estruturais locais para o Tahta 0.13.x. */
+.slidev-layout {
+  container-type: inline-size;
+}
+
+.slidev-layout :is(
+  .l-head,
+  .l-body,
+  .fit,
+  .fit-inner,
+  .two-cols,
+  .cols,
+  .panels,
+  .agenda,
+  .feature,
+  .stat-grid,
+  .steps,
+  .timeline,
+  .ref-groups,
+  .code-explain,
+  .vs,
+  .diagram-stage,
+  .code-wrap,
+  .chart-stage,
+  .embed-stage
+) {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+.fit,
+.fit-inner {
+  box-sizing: border-box;
+}
+
+.fit-inner {
+  transform-origin: top center;
+}
+
+.two-cols {
+  height: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--academic-layout-gap-block) var(--academic-layout-gap-inline);
+  align-items: stretch;
+}
+
+.two-cols > .col,
+.cols > .col,
+.panels > *,
+.agenda > *,
+.feature > *,
+.stat-grid > *,
+.steps > *,
+.timeline > *,
+.ref-groups > *,
+.code-explain > *,
+.vs > * {
+  min-width: 0;
+}
+
+.fit-inner:has(> .two-cols),
+.two-cols > .col {
+  min-height: 0;
+  height: 100%;
+}
+
+.cols {
+  gap: var(--academic-layout-gap-inline);
+}
+
+.panels {
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+  gap: var(--academic-layout-gap-block) var(--academic-layout-gap-inline);
+}
+
+.panels.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.agenda {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--academic-layout-gap-block) var(--academic-layout-gap-inline);
+}
+
+.agenda-item,
+.ref-row,
+.explain-note {
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.feature,
+.stat-grid {
+  column-gap: var(--academic-layout-gap-inline);
+  row-gap: var(--academic-layout-gap-block);
+}
+
+.steps {
+  gap: clamp(0.5rem, 1.5cqw, var(--academic-layout-gap-block));
+}
+
+.steps > .reveal {
+  flex: 1 1 0 !important;
+}
+
+.timeline {
+  grid-auto-columns: minmax(0, 1fr);
+  gap: var(--academic-layout-gap-inline);
+}
+
+.ref-groups {
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  column-gap: var(--academic-layout-gap-inline);
+}
+
+.ref-desc,
+.agenda-desc,
+.panel-body,
+.feature-desc,
+.step-desc,
+.tl-desc,
+.explain-note > span {
+  overflow-wrap: anywhere;
+}
+
+.code-explain {
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: var(--academic-layout-gap-inline);
+}
+
+.vs {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: var(--academic-layout-gap-inline);
+}
+
+.slidev-layout.l-metric {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: var(--academic-layout-gap-inline);
+}
+
+.split {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.split.left {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.showcase {
+  grid-template-columns: minmax(0, 43fr) minmax(0, 57fr);
+}
+
+.showcase.flip {
+  grid-template-columns: minmax(0, 57fr) minmax(0, 43fr);
+}
+
+.code-wrap,
+.chart-stage,
+.embed-stage {
+  margin-inline: 0;
+}
+
+.chart-stage {
+  flex: 1 1 auto;
+  min-height: 12rem;
+  max-height: 100%;
+}
+
+.chart-note {
+  flex: 0 0 auto;
+  margin-top: var(--academic-layout-gap-block) !important;
+}
+
+.embed-stage {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.embed-stage .embed {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.embed iframe,
+.embed video {
+  object-fit: contain;
+}
+
+.diagram-stage .mermaid,
+.diagram-stage .mermaid svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.two-cols > .col > p:has(> img:only-child) {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  max-width: none;
+}
+
+.two-cols > .col > p:has(> img:only-child) > img,
+.two-cols > .col > :is(img, video, svg, iframe, figure):only-child {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.embed-demo {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  background:
+    linear-gradient(135deg, var(--academic-code-background), var(--academic-white));
+  color: var(--academic-navy-800);
+  font: 700 1.3rem/1.2 var(--font-display);
+}
+
+@container (max-width: 56rem) {
+  .slidev-layout :is(.two-cols, .agenda, .panels.two) {
+    column-gap: clamp(1rem, 3cqw, 1.5rem);
+  }
+
+  .slidev-layout .steps .arrow {
+    font-size: 1rem;
+  }
+}

@@ -171,22 +171,22 @@
       "day": "Quinta",
       "date": "08/10/2026",
       "module": "",
-      "topic": "Jest: funções after e before, testes aninhados e parametrizados",
-      "id": ""
+      "topic": "Jest: tratamento de exceções",
+      "id": "aula-09"
     },
     {
       "day": "Quarta",
       "date": "14/10/2026",
       "module": "",
-      "topic": "Jest: tratamento de exceções e mocks",
-      "id": ""
+      "topic": "Jest: after e before",
+      "id": "aula-10"
     },
     {
       "day": "Quinta",
       "date": "15/10/2026",
       "module": "",
-      "topic": "Hands-on",
-      "id": ""
+      "topic": "Jest: parametrização e mocks",
+      "id": "aula-11"
     },
     {
       "day": "Segunda",

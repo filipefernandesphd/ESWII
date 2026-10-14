@@ -40,9 +40,9 @@
 | Quinta | 01/10/2026 |  | [Tipos de testes](aula-07/) |
 | Segunda | 05/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 07/10/2026 |  | [Jest: primeiros passos](aula-08/) |
-| Quinta | 08/10/2026 |  | Jest: funções after e before, testes aninhados e parametrizados |
-| Quarta | 14/10/2026 |  | Jest: tratamento de exceções e mocks |
-| Quinta | 15/10/2026 |  | Hands-on |
+| Quinta | 08/10/2026 |  | [Jest: tratamento de exceções](aula-09/) |
+| Quarta | 14/10/2026 |  | [Jest: after e before](aula-10/) |
+| Quinta | 15/10/2026 |  | [Jest: parametrização e mocks](aula-11/) |
 | Segunda | 19/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 21/10/2026 |  | Desenvolvimento dirigido por testes (TDD) |
 | Quinta | 22/10/2026 |  | Princípios FIRST |
