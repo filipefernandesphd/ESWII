@@ -46,7 +46,7 @@ title: "Objetivos"
 layout: default
 title: "Clicos de TDD"
 ---
-<img src="./assets/ciclostdd.png" />
+<img src="../../assets/ciclostdd.png" />
 
 ---
 layout: section

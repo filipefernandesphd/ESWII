@@ -44,12 +44,12 @@
 | Quarta | 14/10/2026 |  | [Jest: after e before](aula-10/) |
 | Quinta | 15/10/2026 |  | [Jest: parametrização e mocks](aula-11/) |
 | Segunda | 19/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
-| Quarta | 21/10/2026 |  | Desenvolvimento dirigido por testes (TDD) |
+| Quarta | 21/10/2026 |  | [Desenvolvimento dirigido por testes (TDD)](aula-12/) |
 | Quinta | 22/10/2026 |  | Princípios FIRST |
 | Quinta | 22/10/2026 |  | Test smells |
 | Segunda | 26/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 28/10/2026 |  | [AULA CANCELADA] 28 - Dia do Servidor Público |
-| Quinta | 29/10/2026 |  | AVALIAÇÃO 2 |
+| Quinta | 29/10/2026 |  | SECITEC - AVALIAÇÃO 2 |
 | Quarta | 04/11/2026 | MD3: Evolução de Software | Manutenção de software |
 | Quinta | 05/11/2026 |  | [AULA CANCELADA] 05 - Aniversário de Manhuaçu |
 | Segunda | 09/11/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
