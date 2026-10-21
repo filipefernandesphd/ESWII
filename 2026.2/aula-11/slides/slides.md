@@ -86,7 +86,7 @@ layout: code
 title: Exemplo 2 — desconto em vários valores
 ---
 
-```js[font=large]
+```js[font=normal]
 test.each([
   { preco: 100, percentual: 10, esperado: 90 },
   { preco: 80, percentual: 25, esperado: 60 },
