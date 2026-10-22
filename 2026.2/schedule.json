@@ -207,14 +207,21 @@
       "date": "22/10/2026",
       "module": "",
       "topic": "Princípios FIRST",
-      "id": ""
+      "id": "aula-13"
     },
     {
       "day": "Quinta",
       "date": "22/10/2026",
       "module": "",
-      "topic": "Test smells",
-      "id": ""
+      "topic": "Test Smells",
+      "id": "aula-14"
+    },
+    {
+      "day": "Quinta",
+      "date": "22/10/2026",
+      "module": "",
+      "topic": "Hands-on",
+      "id": "handson-02"
     },
     {
       "day": "Segunda",
@@ -234,7 +241,7 @@
       "day": "Quinta",
       "date": "29/10/2026",
       "module": "",
-      "topic": "SECITEC - AVALIAÇÃO 2",
+      "topic": "SECITEC",
       "id": ""
     },
     {
