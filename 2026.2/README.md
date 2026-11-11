@@ -51,7 +51,7 @@
 | Segunda | 26/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 28/10/2026 |  | [AULA CANCELADA] 28 - Dia do Servidor Público |
 | Quinta | 29/10/2026 |  | SECITEC |
-| Quarta | 04/11/2026 | MD3: Evolução de Software | Manutenção de software |
+| Quarta | 04/11/2026 | MD3: Evolução de Software | [Manutenção de software](aula-15/) |
 | Quinta | 05/11/2026 |  | [AULA CANCELADA] 05 - Aniversário de Manhuaçu |
 | Segunda | 09/11/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 11/11/2026 |  | Versionamento de código com git |
