@@ -241,15 +241,15 @@
       "day": "Quinta",
       "date": "29/10/2026",
       "module": "",
-      "topic": "SECITEC",
+      "topic": "[AULA CANCELADA] SECITEC",
       "id": ""
     },
     {
       "day": "Quarta",
       "date": "04/11/2026",
-      "module": "MD3: Evolução de Software",
-      "topic": "Manutenção de software",
-      "id": "aula-15"
+      "module": "",
+      "topic": "AVALIAÇÃO 2",
+      "id": ""
     },
     {
       "day": "Quinta",
@@ -268,9 +268,9 @@
     {
       "day": "Quarta",
       "date": "11/11/2026",
-      "module": "",
-      "topic": "Versionamento de código com git",
-      "id": ""
+      "module": "MD3: Evolução de Software",
+      "topic": "Manutenção de software",
+      "id": "aula-15"
     },
     {
       "day": "Quinta",
@@ -284,6 +284,13 @@
       "date": "14/11/2026",
       "module": "",
       "topic": "[AULA CANCELADA]",
+      "id": ""
+    },
+    {
+      "day": "Segunda",
+      "date": "16/11/2026",
+      "module": "",
+      "topic": "[REPOSIÇÃO - 2 AULAS] Desenvolvimento do projeto final",
       "id": ""
     },
     {

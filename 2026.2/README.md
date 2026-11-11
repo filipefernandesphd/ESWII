@@ -50,13 +50,14 @@
 | Quinta | 22/10/2026 |  | [Hands-on](handson-02/) |
 | Segunda | 26/10/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
 | Quarta | 28/10/2026 |  | [AULA CANCELADA] 28 - Dia do Servidor Público |
-| Quinta | 29/10/2026 |  | SECITEC |
-| Quarta | 04/11/2026 | MD3: Evolução de Software | [Manutenção de software](aula-15/) |
+| Quinta | 29/10/2026 |  | [AULA CANCELADA] SECITEC |
+| Quarta | 04/11/2026 |  | AVALIAÇÃO 2 |
 | Quinta | 05/11/2026 |  | [AULA CANCELADA] 05 - Aniversário de Manhuaçu |
 | Segunda | 09/11/2026 |  | [REPOSIÇÃO - 5 AULAS] Desenvolvimento do projeto final |
-| Quarta | 11/11/2026 |  | Versionamento de código com git |
+| Quarta | 11/11/2026 | MD3: Evolução de Software | [Manutenção de software](aula-15/) |
 | Quinta | 12/11/2026 |  | Versionamento de código com git |
 | Sábado | 14/11/2026 |  | [AULA CANCELADA] |
+| Segunda | 16/11/2026 |  | [REPOSIÇÃO - 2 AULAS] Desenvolvimento do projeto final |
 | Quarta | 18/11/2026 |  | AVALIAÇÃO 3 |
 | Quinta | 19/11/2026 | MD4: Projeto Final | Desenvolvimento do projeto final |
 | Quarta | 25/11/2026 |  | Desenvolvimento do projeto final |
